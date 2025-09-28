@@ -12,7 +12,9 @@
   <meta property="og:url" content="https://www.calmoris.com/">
   <meta property="og:image" content="./assets/calmoris.webp">
  <link rel="stylesheet" href="./assets/css/home.css">
-
+ <link rel="stylesheet" href="./assets/css/slider.css">
+ <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
   <header>
@@ -24,7 +26,7 @@
       <!-- Navigation Menu -->
       <nav class="main-nav">
         <button class="menu-toggle" aria-label="Menu">☰</button>
-        <ul>
+        <ul class="nav-links">
           <li><a href="#products" data-fr="Produits" data-ar="المنتجات">Produits</a></li>
           <li><a href="#why" data-fr="Pourquoi Nous" data-ar="لماذا نحن">Pourquoi Nous</a></li>
           <li><a href="#contact" data-fr="Contactez-nous" data-ar="اتصل بنا">Contactez-nous</a></li>
@@ -42,15 +44,50 @@
         </div>
       </nav>
     </div>
-
-    <div class="container banner">
-      <h1 data-fr="✨ Découvrez Nos Produits Uniques ✨" data-ar="✨ اكتشف منتجاتنا المميزة ✨">✨ Découvrez Nos Produits Uniques ✨</h1>
-      <p data-fr="Des articles soigneusement sélectionnés pour améliorer votre quotidien – qualité, élégance et confort au rendez-vous." data-ar="منتجات مختارة بعناية لتحسين حياتك اليومية – الجودة، الأناقة، والراحة في مكان واحد.">Des articles soigneusement sélectionnés pour améliorer votre quotidien – qualité, élégance et confort au rendez-vous.</p>
-      <a href="#products" class="btn" data-fr="Commander Maintenant" data-ar="اشترِ الآن">Commander Maintenant</a>
-    </div>
   </header>
 
   <main class="container">
+ 
+<swiper-container class="mySwiper" pagination="true" pagination-type="bullets" autoplay="true" loop="true">
+  <swiper-slide>
+    <div class="hero-slide" style="background-image: url('https://placehold.co/1600x600');">
+      <div class="hero-content">
+        <h2>Peau régénérée et repulpée</h2>
+        <a href="#" class="hero-btn">En savoir plus</a>
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div class="hero-slide" style="background-image: url('https://placehold.co/1600x600/13678A/fff');">
+      <div class="hero-content">
+        <h2>Boostez Votre Énergie Naturellement</h2>
+        <a href="#" class="hero-btn">Acheter Maintenant</a>
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div class="hero-slide" style="background-image: url('https://placehold.co/1600x600/9AEBA3/012030');">
+      <div class="hero-content">
+        <h2>Produits 100% Naturels</h2>
+        <a href="#" class="hero-btn">Découvrir</a>
+      </div>
+    </div>
+  </swiper-slide>
+
+  <swiper-slide>
+    <div class="hero-slide" style="background-image: url('https://placehold.co/1600x600/fefefe/13678A');">
+      <div class="hero-content">
+        <h2>Qualité et Confiance</h2>
+        <a href="#" class="hero-btn">Commander</a>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+
+
+
     <section id="products" class="products">
       <article class="product">
         <img src="https://placehold.co/600x400" width="600" height="400" alt="Produit 1 – description courte">
@@ -112,6 +149,8 @@
     </div>
   </footer>
    <script src="./assets/js/home.js"></script>
+   <script src="./assets/js/slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>

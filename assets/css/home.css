@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Funnel Sans", sans-serif;
   background: var(--light);
   color: var(--dark);
   line-height: 1.6;
@@ -265,15 +265,14 @@ main {
  
  .why {
     text-align: center;
-    padding: 40px 20px;
-    background: #f9f9f9;
+    padding: 40px 20px; 
   }
 
   .why h2 {
     font-size: 22px;
     font-weight: 600;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
   }
 
   .why-items {
@@ -288,10 +287,11 @@ main {
     max-width: 220px;
     text-align: center;
     transition: transform 0.3s ease;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
   .why-box img {
-    height: 70px;
+    height: 125px;
     width: auto;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
@@ -299,9 +299,9 @@ main {
 
   .why-box p {
     font-size: 16px;
-    font-weight: 500;
-    color: #444;
-    margin: 0;
+    font-weight: 600;
+    color: #000000;
+    margin: 0px 0px 6px 0px;
   }
 
   .why-box:hover {

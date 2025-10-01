@@ -239,6 +239,7 @@ main {
 }
 
 .products {
+  margin-top: 8px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
@@ -261,21 +262,63 @@ main {
   height: auto;
   border-radius: 6px;
 }
+ 
+ .why {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f9f9f9;
+  }
 
-/* Why & Testimonials */
-.why, .testimonials { 
-  text-align: center;
-  padding: 3rem 1rem;
-}
-.why ul {
-  list-style: none;
-  padding: 0;
-}
-.testimonials {
-  background: var(--secondary);
-  color: var(--light);
-}
+  .why h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+  }
 
+  .why-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .why-box {
+    flex: 1 1 200px;
+    max-width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .why-box img {
+    height: 70px;
+    width: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .why-box p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+    margin: 0;
+  }
+
+  .why-box:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .why-items {
+      gap: 20px;
+    }
+    .why-box img {
+      height: 50px;
+    }
+    .why-box p {
+      font-size: 14px;
+    }
+  }
 /* Footer */
 footer {
   background: var(--primary);
@@ -284,3 +327,43 @@ footer {
   padding: 2rem 1rem;
 }
  
+ .logo-strip {
+      width: 100%;
+      background: #f9f9f9;
+      padding: 20px 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo-track {
+      display: flex;
+      gap: 60px;
+      animation: moveLeftRight 8s linear infinite alternate;
+    }
+
+    .logo-strip img {
+      height: 80px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-strip img:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes moveLeftRight {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-40%); } /* adjust based on total width */
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .logo-strip img {
+        height: 50px;
+      }
+      .logo-track {
+        gap: 30px;
+        animation: moveLeftRight 6s linear infinite alternate;
+      }
+    }

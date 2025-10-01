@@ -1,0 +1,48 @@
+{
+  "title": "Calmoris – Produits Naturels & Bien-être",
+  "metaDescription": "Découvrez Calmoris : des produits naturels soigneusement sélectionnés pour améliorer votre quotidien avec qualité, élégance et confort. Livraison rapide et satisfaction garantie.",
+  
+  "navProducts": "Produits",
+  "navWhy": "Pourquoi Nous",
+  "navContact": "Contactez-nous",
+
+  "hero1Title": "Peau régénérée et repulpée",
+  "hero1Btn": "En savoir plus",
+  "hero2Title": "Boostez Votre Énergie Naturellement",
+  "hero2Btn": "Acheter Maintenant",
+  "hero3Title": "Produits 100% Naturels",
+  "hero3Btn": "Découvrir",
+  "hero4Title": "Qualité et Confiance",
+  "hero4Btn": "Commander",
+
+  "whyTitle": "Pourquoi Nous Choisir ?",
+  "why1": "Qualité supérieure",
+  "why2": "Livraison gratuite",
+  "why3": "Satisfaction garantie",
+  "why4": "100% naturelles",
+  "why5": "Paiement à la livraison",
+
+  "productsTitle1": "Produit 1",
+  "productsDesc": "Description courte du produit",
+  "productsBuy1": "Acheter Produit 1",
+  "productsTitle2": "Produit 2",
+  "productsBuy2": "Acheter Produit 2",
+  "productsTitle3": "Produit 3",
+  "productsBuy3": "Acheter Produit 3",
+  "productsTitle4": "Produit 4",
+  "productsBuy4": "Acheter Produit 4",
+
+  "logosTitle": "Recommandé par :",
+
+  "testimonialsTitle": "Avis de Nos Clients",
+  "testimonial1": "« La meilleure expérience d'achat ! Produits magnifiques et livraison rapide. »",
+  "testimonial2": "« Qualité exceptionnelle et prix abordables. Je recommande fortement ! »",
+
+  "contactTitle": "Contactez-nous",
+  "contactDesc": "Une question ? Nous serons ravis de vous aider.",
+  "contactBtn": "Envoyer un email",
+
+  "footerTitle": "Ne perdez plus de temps",
+  "footerDesc": "Rejoignez des centaines de clients satisfaits dès aujourd’hui !",
+  "footerBtn": "Commander Maintenant"
+}

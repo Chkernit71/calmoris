@@ -1,30 +1,26 @@
-// Language switch
-  const currentLangBtn = document.getElementById('current-lang');
-  const langOptions = document.getElementById('lang-options');
-  const elements = document.querySelectorAll('[data-fr]');
+// Language switcher
+const currentLangBtn = document.getElementById('current-lang');
+const langOptions = document.getElementById('lang-options');
 
-  currentLangBtn.addEventListener('click', () => {
-    langOptions.style.display = langOptions.style.display === 'block' ? 'none' : 'block';
-  });
+// Toggle dropdown
+currentLangBtn.addEventListener('click', () => {
+  langOptions.style.display = langOptions.style.display === 'block' ? 'none' : 'block';
+});
 
-  langOptions.querySelectorAll('div').forEach(option => {
-    option.addEventListener('click', () => {
-      const lang = option.getAttribute('data-lang');
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      elements.forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
-      });
-      currentLangBtn.innerHTML = option.innerHTML;
-      langOptions.style.display = 'none';
-    });
-  });
+// Handle language selection
+langOptions.querySelectorAll('div').forEach(option => {
+  option.addEventListener('click', () => {
+    const lang = option.getAttribute('data-lang');
 
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.lang-switch')) {
-      langOptions.style.display = 'none';
+    // Redirect to correct version
+    if (lang === 'fr') {
+      window.location.href = '/fr/';
+    } else if (lang === 'ar') {
+      window.location.href = '/ar/';
     }
   });
+});
+
 
   // Mobile menu toggle
   const menuToggle = document.querySelector('.menu-toggle');

@@ -55,67 +55,83 @@
 
   <main class="container">
     <!-- Hero Slider -->
-    <swiper-container class="mySwiper" pagination="true" pagination-type="bullets" autoplay="true" loop="true">
-      <swiper-slide>
-        <div class="hero-slide" style="background-image: url('https://placehold.co/1600x600');">
-          <div class="hero-content">
-            <h2>Peau régénérée et repulpée</h2>
-            <a href="#" class="hero-btn">En savoir plus</a>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="hero-slide" style="background-image: url('https://placehold.co/1600x600/13678A/fff');">
-          <div class="hero-content">
-            <h2>Boostez Votre Énergie Naturellement</h2>
-            <a href="#" class="hero-btn">Acheter Maintenant</a>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="hero-slide" style="background-image: url('https://placehold.co/1600x600/9AEBA3/012030');">
-          <div class="hero-content">
-            <h2>Produits 100% Naturels</h2>
-            <a href="#" class="hero-btn">Découvrir</a>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="hero-slide" style="background-image: url('https://placehold.co/1600x600/fefefe/13678A');">
-          <div class="hero-content">
-            <h2>Qualité et Confiance</h2>
-            <a href="#" class="hero-btn">Commander</a>
-          </div>
-        </div>
-      </swiper-slide>
-    </swiper-container>
+   <!-- ✅ Diaporama Héros -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="hero-slide" style="background-image: url('../assets/images/slider/calmoris-slider.png');">
+        <a href="#" class="hero-btn">Acheter maintenant</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="hero-slide" style="background-image: url('../assets/images/slider/calmoris-slider.png');">
+        <a href="#" class="hero-btn">Acheter maintenant</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="hero-slide" style="background-image: url('../assets/images/slider/calmoris-slider.png');">
+        <a href="#" class="hero-btn">Acheter maintenant</a>
+      </div>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
 
     <!-- Why Us Section -->
-    <section class="why" id="why">
-      <h2>Pourquoi Nous Choisir ?</h2>
-      <div class="why-items">
-        <div class="why-box">
-          <img src="../assets/images/qualite-certifie-premium.jpg" alt="Qualité supérieure">
-          <p>Qualité supérieure</p>
-        </div>
-        <div class="why-box">
-          <img src="../assets/images/free-shipping.jpg" alt="Livraison gratuite">
-          <p>Livraison gratuite</p>
-        </div>
-        <div class="why-box">
-          <img src="../assets/images/Satisfaction-garantie.jpg" alt="Satisfaction garantie">
-          <p>Satisfaction garantie</p>
-        </div>
-        <div class="why-box">
-          <img src="../assets/images/100-pour-cent-naturel.jpg" alt="100% naturelles">
-          <p>100% naturelles</p>
-        </div>
-        <div class="why-box">
-          <img src="../assets/images/paiement-livraison.jpg" alt="Paiement à la livraison">
-          <p>Paiement à la livraison</p>
-        </div>
+<!-- Why Us Section -->
+<section class="why" id="why">
+  <h2>Pourquoi Nous Choisir ?</h2>
+
+  <div class="why-line">
+    <div class="why-track">
+      <div class="why-box">
+        <img src="../assets/images/qualite-certifie-premium.jpg" alt="Qualité supérieure">
+        <p>Qualité supérieure</p>
       </div>
-    </section>
+      <div class="why-box">
+        <img src="../assets/images/free-shipping.jpg" alt="Livraison gratuite">
+        <p>Livraison gratuite</p>
+      </div>
+      <div class="why-box">
+        <img src="../assets/images/Satisfaction-garantie.jpg" alt="Satisfaction garantie">
+        <p>Satisfaction garantie</p>
+      </div>
+      <div class="why-box">
+        <img src="../assets/images/100-pour-cent-naturel.jpg" alt="100% naturelles">
+        <p>100% naturelles</p>
+      </div>
+      <div class="why-box">
+        <img src="../assets/images/paiement-livraison.jpg" alt="Paiement à la livraison">
+        <p>Paiement à la livraison</p>
+      </div>
+
+      <!-- Duplicate for seamless infinite scroll -->
+      <div class="why-box">
+        <img src="../assets/images/qualite-certifie-premium.jpg" alt="Qualité supérieure">
+        <p>Qualité supérieure</p>
+      </div>
+      <div class="why-box">
+        <img src="../assets/images/free-shipping.jpg" alt="Livraison gratuite">
+        <p>Livraison gratuite</p>
+      </div>
+      <div class="why-box">
+        <img src="../assets/images/Satisfaction-garantie.jpg" alt="Satisfaction garantie">
+        <p>Satisfaction garantie</p>
+      </div>
+      <div class="why-box">
+        <img src="../assets/images/100-pour-cent-naturel.jpg" alt="100% naturelles">
+        <p>100% naturelles</p>
+      </div>
+      <div class="why-box">
+        <img src="../assets/images/paiement-livraison.jpg" alt="Paiement à la livraison">
+        <p>Paiement à la livraison</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Products --> 
      <!-- Products -->
@@ -242,15 +258,12 @@
 
   </div>
 </section>
-
-
-
-
     <!-- Logos -->
     <section class="logo-strip-wrapper">
-      <h3>Recommandé par :</h3>
+      <h3>Recommandé par </h3>
       <div class="logo-strip">
         <div class="logo-track">
+          <img src="../assets/images/dmp-logo.png" alt="DMP Logo">
           <img src="../assets/images/onssa-logo.png" alt="ONSSA Logo">
           <img src="../assets/images/logo-ministere-sante.png" alt="Ministère de la Santé Logo">
           <img src="../assets/images/iso-logo.webp" alt="ISO Logo">
@@ -283,7 +296,17 @@
 
   <!-- Scripts -->
   <script src="../assets/js/home.js"></script>
-  <script src="../assets/js/slider.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+ <!-- ✅ Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+    
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+  </script>
 </body>
 </html>

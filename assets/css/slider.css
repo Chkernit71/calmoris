@@ -37,14 +37,9 @@
 
 /* ---------- MOBILE RESPONSIVE ---------- */
 @media (max-width: 768px) {
-  .mySwiper {
-    height: 400px; /* smaller height */
-  }
-
   .hero-slide {
-    justify-content: center; /* center text on mobile */
-    padding-left: 0;
-    padding: 20px;
+    justify-content: center; 
+    height: 343px;
   }
 
   .hero-content {

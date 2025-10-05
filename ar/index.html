@@ -22,6 +22,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <style>
+    @media (max-width: 768px) {
+    .lang-options{
+      left: 0;
+      right: auto;
+      direction: ltr;
+    }}
+  </style>
 </head>
 
 <body>
@@ -44,11 +52,11 @@
       <!-- Lang Switch -->
       <nav class="lang-switch" aria-label="اختيار اللغة">
         <button class="lang-btn" id="current-lang">
-          <img src="https://flagcdn.com/ma.svg" alt="AR"> العربية
-        </button>
+          <img src="https://flagcdn.com/ma.svg" alt="AR"><span> العربية</span></button>
         <div class="lang-options" id="lang-options">
-          <div data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="FR"> Français</div>
-          <div data-lang="ar"><img src="https://flagcdn.com/ma.svg" alt="AR"> العربية</div>
+          <div data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="FR"> <span>Français</span></div>
+          <div data-lang="ar"><img src="https://flagcdn.com/ma.svg" alt="AR"><span>العربية</span>
+          </div>
         </div>
       </nav>
     </div>

@@ -1,0 +1,64 @@
+.product-page {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.product-gallery img {
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.benefits li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #f80404;
+  font-weight: 700;
+}
+
+.buy-btn {
+  background: var(--secondary);
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.related-products .products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}

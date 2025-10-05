@@ -370,7 +370,9 @@ footer {
   .lang-switch {
     order: 3;
   }
-
+  .lang-switch .lang-btn span{
+    display: none;
+  }
   /* Mobile nav dropdown */
   .main-nav ul {
     flex-direction: column;

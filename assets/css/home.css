@@ -171,7 +171,11 @@ body {
   gap: 0.8rem;
   padding: 2px;
 }
-
+#products h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 24px;
+}
 .product {
   background: var(--light);
   border: 1px solid #ddd;
@@ -235,7 +239,6 @@ body {
 /* WHY US - horizontal moving line */
 .why {
   text-align: center;
-  padding: 40px 0;
   overflow: hidden;
   background: #fff;
 }
@@ -352,11 +355,9 @@ footer {
     align-items: center;
     padding: 0 3px;
   }
-
   .logo img {
     width: 82px;
   }
-
   /* Mobile header order */
   .menu-toggle {
     display: block;
@@ -413,9 +414,14 @@ footer {
     background: var(--secondary);
     color: var(--light);
   }
-
+  .products {
+      margin-top: 4px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0rem; 
+  }
   .product{
-    margin: 14px;
+    margin: 4px;
   }
   /* Why Section */
    .why-box img {
@@ -426,6 +432,7 @@ footer {
   }
   .why-track {
     animation: moveLeft 15s linear infinite;
+      gap: 0px;
   }
   .logo-strip-wrapper{
     text-align: center;

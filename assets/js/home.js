@@ -37,5 +37,22 @@ langOptions.querySelectorAll('div').forEach(option => {
     }
   });
 
+ const backToTopBtn = document.getElementById('backToTop');
 
+  // Show button after scrolling down
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+
+  // Smooth scroll to top
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
  

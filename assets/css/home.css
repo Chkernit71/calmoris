@@ -201,6 +201,7 @@ body {
       cursor: pointer;
       align-self: flex-start;
       transition: background 0.2s ease, transform 0.2s ease;
+      text-decoration-line: unset;
     }
 
     .buy-btn:hover {
@@ -530,7 +531,28 @@ footer {
     animation: moveLeftRight 6s linear infinite alternate;
   }
   .cards {
-    flex-direction: column;
-    align-items: center;
-      }
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    }
+  .card {
+    width: 203px;
+  }
+  .buy-btn {
+    padding: 8px 16px;
+    border-radius: 18px;
+    font-size: 0.8rem;
+  }
+  .card-title {
+    font-size: 0.7rem;
+  }
+  .card-description {
+    font-size: 0.6rem;
+    line-height: 1;
+    margin-top: 2px;
+    margin-bottom: 17px;
+}
+.card-price {
+    font-size: 0.7rem;
+}
 }

@@ -402,6 +402,9 @@ footer {
   display: flex;
   justify-content: center;
 }
+.logo-strip-wrapper{
+    text-align: center;
+}
 .logo-track {
   display: flex;
   gap: 60px;
@@ -547,13 +550,11 @@ footer {
     animation: moveLeft 15s linear infinite;
       gap: 0px;
   }
-  .logo-strip-wrapper{
-    text-align: center;
-  }
   /* Logo strip */
   .logo-strip img {
     height: 70px;
   }
+
   .logo-track {
     gap: 30px;
     animation: moveLeftRight 6s linear infinite alternate;

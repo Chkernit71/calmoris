@@ -18,7 +18,110 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Funnel Sans", sans-serif;
+      background-color: #fff;
+      color: #222;
+    }
+
+    .product-footer {
+      margin-top: 25px;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      background-color: #f9fafb;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 320px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .total-price {
+      font-size: 18px;
+      color: #16a34a;
+      margin-top: 5px;
+      font-weight: 600;
+    }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 15px 0;
+      background: #fff;
+      border-radius: 50px;
+      padding: 8px 14px;
+      box-shadow: inset 0 0 0 1px #e5e7eb;
+    }
+
+    .quantity-control button {
+      background-color: #e0f2f1;
+      color: #16a34a;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      line-height: 1;
+      transition: all 0.2s ease;
+    }
+
+    .quantity-control button:hover {
+      background-color: #16a34a;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .quantity-control input {
+      width: 60px;
+      text-align: center;
+      font-size: 16px;
+      border: none;
+      background: transparent;
+      color: #333;
+      font-weight: 600;
+      outline: none;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(22, 163, 74, 0.3);
+      transition: all 0.2s ease;
+      align-self: center;
+    }
+
+    .buy-btn:hover {
+      background: #128c43;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(22, 163, 74, 0.35);
+    }
+
+    @media (max-width: 768px) {
+      .product-footer {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -28,7 +131,6 @@
         <a href="/fr/"><img src="../../../assets/calmoris.webp" alt="Logo Calmoris"></a>
       </div>
 
-      <!-- Navigation -->
       <nav class="main-nav">
         <button class="menu-toggle" aria-label="Menu">☰</button>
         <ul class="nav-links">
@@ -38,7 +140,6 @@
         </ul>
       </nav>
 
-      <!-- Lang Switch -->
       <nav class="lang-switch" aria-label="Langue">
         <button class="lang-btn" id="current-lang">
           <img src="https://flagcdn.com/fr.svg" alt="FR"> Français
@@ -75,10 +176,19 @@
         </ul>
 
         <div class="product-footer">
-          <span class="price" itemprop="price" content="220">220 DH</span>
+          <span class="price" itemprop="price" content="220">Prix : 220 DH</span>
           <meta itemprop="priceCurrency" content="MAD">
-          <a href="https://wa.me/212600000000?text=Bonjour%20je%20souhaite%20commander%20Anti-Stress%20%26%20Sommeil%20Profond%20Calmoris"
-             target="_blank" class="btn buy-btn">Acheter via WhatsApp</a>
+          <span  class="total-price">Total : <span id="total-price">220</span> DH</span>
+
+          <div class="quantity-control">
+            <button type="button" id="decrease">-</button>
+            <input type="number" id="quantity" value="1" min="1">
+            <button type="button" id="increase">+</button>
+          </div>
+
+          <a id="whatsapp-btn" href="#" target="_blank" class="buy-btn">
+            Acheter via WhatsApp 💬
+          </a>
         </div>
       </div>
     </section>
@@ -98,7 +208,6 @@
       </p>
     </section>
 
-    <!-- Recommandations -->
     <section class="related-products">
       <h2>Produits similaires</h2>
       <div class="products">
@@ -123,6 +232,42 @@
     </div>
   </footer>
 
-  <script src="../../../assets/js/home.js"></script>
+  <script>
+    const productName = document.querySelector('[itemprop="name"]').innerText.trim();
+    const qtyInput = document.getElementById('quantity');
+    const increaseBtn = document.getElementById('increase');
+    const decreaseBtn = document.getElementById('decrease');
+    const whatsappBtn = document.getElementById('whatsapp-btn');
+    const totalPriceElement = document.getElementById('total-price');
+    const basePrice = parseInt(document.querySelector('[itemprop="price"]').getAttribute('content'));
+    const phoneNumber = "212600000000"; // replace with your WhatsApp number
+
+   function updateTotalAndLink() {
+    
+    const quantity = parseInt(qtyInput.value) || 1;
+    const total = basePrice * quantity;
+    totalPriceElement.textContent = total;
+    const message = `Bonjour Calmoris, je souhaite commander ${quantity} ${quantity > 1 ? 'unités de' : 'un'} ${productName} Calmoris (Total: ${total} DH).`;
+    const encodedMessage = encodeURIComponent(message);
+    whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  }
+
+    increaseBtn.addEventListener('click', () => {
+      qtyInput.value = parseInt(qtyInput.value) + 1;
+      updateTotalAndLink();
+    });
+
+    decreaseBtn.addEventListener('click', () => {
+      if (parseInt(qtyInput.value) > 1) {
+        qtyInput.value = parseInt(qtyInput.value) - 1;
+        updateTotalAndLink();
+      }
+    });
+
+    qtyInput.addEventListener('input', updateWhatsAppLink);
+    updateWhatsAppLink();
+  </script>
+
+  
 </body>
 </html>

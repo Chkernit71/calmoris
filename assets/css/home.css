@@ -124,6 +124,90 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
+ .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+  }
+
+  .card {
+    width: 270px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+
+    .card:hover {
+          box-shadow: 0 12px 35px rgb(0 0 0 / 16%);
+    }
+
+    .card img {
+          width: 179px;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 0px 24px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      color: #000000;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .card-price {
+      float: right;
+      font-weight: 600;
+      color: #000000;
+      font-size: 0.95rem;
+    }
+
+    .card-description {
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.85);
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .card-footer{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .buy-btn {
+      background: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      border: none;
+      padding: 8px 33px;
+      border-radius: 18px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .buy-btn:hover {
+      background: #000000;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
 
 /* ==============================
    🖼️ HERO / BANNER
@@ -173,8 +257,8 @@ body {
 }
 #products h2 {
   text-align: center;
-  margin-bottom: 0px;
-  margin-top: 24px;
+  margin-bottom: 10px;
+  margin-top: 28px;
 }
 .product {
   background: var(--light);
@@ -445,4 +529,8 @@ footer {
     gap: 30px;
     animation: moveLeftRight 6s linear infinite alternate;
   }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+      }
 }

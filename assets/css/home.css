@@ -134,11 +134,8 @@ body {
   .card {
     width: 270px;
     border-radius: 25px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    overflow: hidden; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
@@ -452,6 +449,258 @@ footer {
   visibility: visible;
 }
 
+
+.scrolling-bar {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  position: relative;
+  width: 100%; /* Ensure it takes up the full width */
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 60s linear infinite; /* Increased the duration to 60 seconds */
+}
+
+.scrolling-text span {
+  margin-right: 50px; /* Space between each text span */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(5%); /* Start the text off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move the text off-screen to the left */
+  }
+}
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-items: center; /* Center items horizontally */
+}
+
+.icon-box {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px; 
+      box-shadow: 0 4px 10px rgb(0 0 0 / 49%);
+    width: 85%;
+    text-align: -webkit-center;
+   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+ 
+  .icon-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 8px rgba(0, 0, 0, 0.25);
+    border-color: #2d5016;
+} 
+
+.icon-box img {
+     width: calc(100px* 0.7);
+    height: calc(100px* 0.7);
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(100%) hue-rotate(120deg) brightness(100%) contrast(100%);
+  }
+
+.icon-box p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #4CAF50; /* Adjust the text color */
+  font-weight: bold;
+}
+.icon-box .icon-wrapper{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+    background: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8fdf8;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+
+.calmoris-header {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #4CAF50;
+}
+
+.calmoris-header h1 {
+  font-size: 32px;
+  color: #4CAF50;
+  font-weight: bold;
+  margin: 0;
+}
+
+.calmoris-header p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.calmoris-faq-container {
+  margin: 40px;
+}
+
+.calmoris-faq-container h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #4CAF50;
+}
+
+.calmoris-faq-item {
+  background-color: #fff;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.calmoris-accordion {
+  background-color: #f1f1f1;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calmoris-accordion:hover {
+  background-color: #dddddd7a; 
+}
+
+.calmoris-panel {
+  padding: 20px;
+  display: none;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+}
+
+.calmoris-panel p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.calmoris-panel.open {
+  background-color: #fafafa;
+  display: block;
+}
+
+.arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* When the accordion is open, rotate the arrow */
+.calmoris-accordion.active .arrow {
+  transform: rotate(180deg);
+}
+
+
+.calmoris-review-container {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.calmoris-reviewer  .calmoris-review-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.calmoris-reviewer  .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.calmoris-reviewer  .swiper-wrapper {
+  display: flex;
+}
+
+.calmoris-reviewer  .swiper-slide {
+  min-width: 300px;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.calmoris-reviewer .calmoris-stars {
+  font-size: 24px;
+  color: #FFD700;
+}
+
+.calmoris-reviewer  .calmoris-review-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.calmoris-reviewer {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.calmoris-reviewer  .swiper-button-next,
+.swiper-button-prev {
+  color: #4CAF50;
+  font-size: 30px;
+}
+
+.calmoris-reviewer  .swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #333;
+}
+
+.calmoris-reviewer  .swiper-pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.calmoris-reviewer  .swiper-pagination-bullet {
+  background-color: #4CAF50;
+}
+.calmoris-review-content {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    height: 181px;
+}
 /* ==============================
    📱 MOBILE STYLES (≤768px)
 ============================== */
@@ -584,4 +833,7 @@ footer {
 .card-price {
     font-size: 0.7rem;
 }
+.icon-container { 
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

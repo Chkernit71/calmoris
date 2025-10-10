@@ -55,4 +55,30 @@ langOptions.querySelectorAll('div').forEach(option => {
       behavior: 'smooth'
     });
   });
+
+
+  // Get all accordion buttons
+const accordions = document.querySelectorAll('.calmoris-accordion');
+
+// Add event listeners to each accordion button
+accordions.forEach(accordion => {
+  accordion.addEventListener('click', () => {
+    // Toggle the "active" class for the clicked accordion
+    accordion.classList.toggle('active');
+    
+    // Get the corresponding panel
+    const panel = accordion.nextElementSibling;
+
+    // If the panel is already open, close it
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
+    } else {
+      // Otherwise, open it with a smooth transition
+      panel.style.display = 'block';
+      panel.classList.add('open');
+    }
+  });
+});
+
+
  

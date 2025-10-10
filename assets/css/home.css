@@ -837,3 +837,115 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+
+
+/* ==============================
+   🧭 Safari enhancements & fallbacks
+   Paste this at the end of your CSS
+============================== */
+
+/* Text rendering & zoom behavior (WebKit) */
+html { -webkit-text-size-adjust: 100%; }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Normalize form controls in Safari */
+button, input, select, textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+  font: inherit;
+}
+
+/* Image rendering in Safari (crisper downscales) */
+img { image-rendering: -webkit-optimize-contrast; }
+
+/* Hardware-accelerate long-running transforms to prevent flicker/jank */
+.why-track,
+.logo-track,
+.scrolling-text {
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* iOS Safari 100vh bugs: prefer modern viewport units when available */
+.banner {
+  /* fallback already set by your padding */
+  min-height: 45svh;   /* small viewport height (iOS safe) */
+  min-height: 45dvh;   /* dynamic viewport height */
+}
+
+/* Back-to-top button: smoother opacity transition on iOS */
+#backToTop {
+  -webkit-backdrop-filter: none; /* prevent unexpected blur inheritance */
+  backface-visibility: hidden;
+}
+
+/* Flexbox GAP fallback for older Safari (< 14.1) */
+@supports not (gap: 1rem) {
+  /* main nav uses gap: 2.3rem */
+  .main-nav ul { margin-left: -2.3rem; }
+  .main-nav ul > li { margin-left: 2.3rem; }
+
+  /* cards: gap: 15px */
+  .cards { margin: -7.5px; }
+  .cards > * { margin: 7.5px; }
+
+  /* icon grid: gap: 20px */
+  .icon-container { margin: -10px; }
+  .icon-container > * { margin: 10px; }
+}
+
+/* Safer sticky-like behavior for mobile menus on iOS overscroll */
+.main-nav ul {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Smooth scrolling without rubber-band glitches */
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+/* Prefer reduced motion (Safari honors this) */
+@media (prefers-reduced-motion: reduce) {
+  .why-track,
+  .logo-track,
+  .scrolling-text {
+    animation: none !important;
+    transform: none !important;
+  }
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Better touch targets on iOS */
+ 
+
+/* iOS tap highlight & focus visibility */
+a, button {
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+}
+:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/* Optional: subtle backdrop blur for menus (Safari needs -webkit-) */
+.lang-options {
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(8px);
+}
+
+/* Prevent font zooming on landscape iPhone */
+@media screen and (max-device-width: 812px) and (orientation: landscape) {
+  html { -webkit-text-size-adjust: 100%; }
+}

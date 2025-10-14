@@ -80,5 +80,52 @@ accordions.forEach(accordion => {
   });
 });
 
+const messages = [
+    "49% OFF Aujourd’hui seulement !",
+    "Livraison GRATUITE dès 249 DH",
+    "100% Naturel et Bio 🌿"
+  ];
 
- 
+  const msgContainer = document.querySelector(".announcement-message");
+  const msgEl = document.querySelector(".announcement-message .text");
+  const prevBtn = document.querySelector(".slider-btn.prev");
+  const nextBtn = document.querySelector(".slider-btn.next");
+
+  let i = 0, rotating = true, delay = 4000, timer;
+
+  function showMessage(index, direction = "next") {
+    msgEl.style.animation = "fadeOutUp 0.5s forwards";
+    setTimeout(() => {
+      msgEl.textContent = messages[index];
+      msgEl.style.animation = "fadeInUp 0.5s forwards";
+    }, 300);
+  }
+
+  function next() {
+    i = (i + 1) % messages.length;
+    showMessage(i);
+  }
+
+  function prev() {
+    i = (i - 1 + messages.length) % messages.length;
+    showMessage(i);
+  }
+
+  prevBtn.addEventListener("click", () => {
+    prev();
+    resetTimer();
+  });
+  nextBtn.addEventListener("click", () => {
+    next();
+    resetTimer();
+  });
+
+  function startTimer() {
+    timer = setInterval(next, delay);
+  }
+  function resetTimer() {
+    clearInterval(timer);
+    startTimer();
+  }
+
+  startTimer();

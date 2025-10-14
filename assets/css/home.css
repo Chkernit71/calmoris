@@ -7,6 +7,12 @@
   --accent: #9AEBA3;
   --light: #fefefe;
   --dark: #012030;
+   --footer-bg: #ffffff;
+      --footer-text: #1a1a1a;
+      --footer-muted: #6b7280;      /* subtle gray */
+      --footer-border: #e5e7eb;     /* divider */
+      --brand: "BIONUVA";
+      --year: "2025";
 }
 
 body {
@@ -949,3 +955,92 @@ a, button {
 @media screen and (max-device-width: 812px) and (orientation: landscape) {
   html { -webkit-text-size-adjust: 100%; }
 }
+
+
+    .site-footer{
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      text-align: center;
+      padding: 40px 16px 28px;
+      font-family: system-ui, -apple-system, "Inter", "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
+
+    /* Top text links */
+    .footer-links{
+      display: inline-flex;
+      gap: 28px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      font-size: 15px;
+      line-height: 1;
+    }
+    .footer-links a{
+      color: var(--footer-text);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: .2px;
+    }
+    .footer-links a:hover{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Social icons row */
+    .social{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      margin: 8px 0 26px;
+    }
+    .social a{
+      width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--footer-text);
+      opacity: .9;
+      transition: transform .15s ease, opacity .2s ease;
+    }
+    .social a:hover{
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+    .social i{ font-size: 20px; line-height: 1; }
+
+    /* Divider above copyright */
+    .footer-divider{
+      border: 0;
+      border-top: 1px solid var(--footer-border);
+      margin: 18px auto 10px;
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    /* Copyright */
+    .copyright{
+      font-size: 12px;
+      color: var(--footer-muted);
+      margin: 10px 0 0;
+      letter-spacing: .2px;
+      white-space: nowrap;
+    }
+
+    /* Small-screen tweaks */
+    @media (max-width: 420px){
+      .footer-links{ gap: 18px; font-size: 14px; }
+      .social{ gap: 18px; }
+    }
+
+    /* Optional dark-mode polish */
+    @media (prefers-color-scheme: dark){
+      :root{
+        --footer-bg: #0b0b0b;
+        --footer-text: #f1f1f1;
+        --footer-muted: #9aa0a6;
+        --footer-border: #1f2937;
+      }
+    }

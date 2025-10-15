@@ -145,7 +145,13 @@ body {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
+    cursor: pointer;
   }
+  .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
     .card:hover {
           box-shadow: 0 12px 35px rgb(0 0 0 / 16%);
@@ -177,10 +183,9 @@ body {
     }
 
     .card-price {
-      float: right;
-      font-weight: 600;
-      color: #000000;
-      font-size: 0.95rem;
+        font-weight: bold;
+        color: #009578;
+        font-size: 1rem;
     }
 
     .card-description {
@@ -195,21 +200,17 @@ body {
       justify-content: space-between;
     }
     .buy-btn {
-      background: rgba(0, 0, 0, 0.8);
-      color: #ffffff;
-      border: none;
-      padding: 8px 33px;
-      border-radius: 18px;
+      background-color: #009578;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
       font-size: 0.9rem;
-      cursor: pointer;
-      align-self: flex-start;
-      transition: background 0.2s ease, transform 0.2s ease;
-      text-decoration-line: unset;
+      transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
     .buy-btn:hover {
-      background: #000000;
-      color: #ffffff;
+      background-color: #00b683;
       transform: scale(1.05);
     }
 
@@ -836,9 +837,7 @@ footer {
     margin-top: 2px;
     margin-bottom: 17px;
 }
-.card-price {
-    font-size: 0.7rem;
-}
+
 .icon-container { 
     grid-template-columns: repeat(2, 1fr);
   }
@@ -848,6 +847,11 @@ footer {
   } 
 }
 
+@media (max-width: 480px) {
+  .card {
+        width: 288px;
+  }
+}
 
 
 
@@ -973,8 +977,8 @@ a, button {
     .footer-links{
       display: inline-flex;
       gap: 28px;
-      align-items: center;
       justify-content: center;
+     align-items: flex-start;
       flex-wrap: wrap;
       margin-bottom: 18px;
       font-size: 15px;
@@ -1141,3 +1145,11 @@ a, button {
   @media (max-width: 600px) {
     .utility-bar__grid { flex-direction: column; gap: .5rem; }
   }
+  .contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-us a {
+    margin-top: 15px;
+}

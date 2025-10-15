@@ -1,273 +1,256 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Anti-Stress & Sommeil Profond – Calmoris</title>
   <meta name="description" content="Découvrez Calmoris Anti-Stress & Sommeil Profond : un complément naturel pour réduire le stress, favoriser la détente et améliorer la qualité du sommeil.">
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Anti-Stress & Sommeil Profond – Calmoris">
   <meta property="og:description" content="Relaxation, sérénité et sommeil réparateur avec des ingrédients naturels de haute qualité.">
   <meta property="og:image" content="../../../assets/images/products/mockup_capsule_main__3__02.webp">
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://www.calmoris.com/fr/produit-sommeil.html">
-  <link rel="stylesheet" href="../../../assets/css/home.css">
-  <link rel="stylesheet" href="../../../assets/css/product.css">
+
+  <!-- Base CSS --> 
+  <!-- Product page CSS -->
+  <link rel="stylesheet" href="../../../assets/css/product.css" />
+
+  <!-- Hreflang -->
   <link rel="alternate" hreflang="fr" href="https://calmoris.com/fr/produit-sommeil.html" />
   <link rel="alternate" hreflang="ar" href="https://calmoris.com/ar/produit-sommeil.html" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: "Funnel Sans", sans-serif;
-      background-color: #fff;
-      color: #222;
-    }
-
-    .product-footer {
-      margin-top: 25px;
-      padding: 20px;
-      border: 1px solid #eee;
-      border-radius: 16px;
-      background-color: #f9fafb;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 320px;
-    }
-
-    .price {
-      font-size: 22px;
-      font-weight: 700;
-      color: #333;
-    }
-
-    .total-price {
-      font-size: 18px;
-      color: #16a34a;
-      margin-top: 5px;
-      font-weight: 600;
-    }
-
-    .quantity-control {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 15px 0;
-      background: #fff;
-      border-radius: 50px;
-      padding: 8px 14px;
-      box-shadow: inset 0 0 0 1px #e5e7eb;
-    }
-
-    .quantity-control button {
-      background-color: #e0f2f1;
-      color: #16a34a;
-      border: none;
-      font-size: 18px;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 50%;
-      width: 34px;
-      height: 34px;
-      line-height: 1;
-      transition: all 0.2s ease;
-    }
-
-    .quantity-control button:hover {
-      background-color: #16a34a;
-      color: white;
-      transform: scale(1.1);
-    }
-
-    .quantity-control input {
-      width: 60px;
-      text-align: center;
-      font-size: 16px;
-      border: none;
-      background: transparent;
-      color: #333;
-      font-weight: 600;
-      outline: none;
-    }
-
-    .buy-btn {
-      display: inline-block;
-      background: #16a34a;
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 50px;
-      font-size: 16px;
-      font-weight: 600;
-      margin-top: 10px;
-      box-shadow: 0 4px 8px rgba(22, 163, 74, 0.3);
-      transition: all 0.2s ease;
-      align-self: center;
-    }
-
-    .buy-btn:hover {
-      background: #128c43;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(22, 163, 74, 0.35);
-    }
-
-    @media (max-width: 768px) {
-      .product-footer {
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
 </head>
 
-<body>
-  <header>
-    <div class="container top-bar">
-      <div class="logo">
-        <a href="/fr/"><img src="../../../assets/calmoris.webp" alt="Logo Calmoris"></a>
-      </div>
+<body class="product-page">
+ <header>
+         <div class="container top-bar">
+            <div class="logo">
+               <img src="../../../assets/calmoris.webp" alt="Calmoris Logo – Produits naturels">
+            </div>
+            <!-- Navigation Menu -->
+            <nav class="main-nav">
+               <button class="menu-toggle" aria-label="Menu">☰</button>
+               <ul class="nav-links">
+                  <li><a href="#products">Produits</a></li>
+                  <li><a href="#why">Pourquoi Nous</a></li>
+                  <li><a href="#contact">Contactez-nous</a></li>
+               </ul>
+            </nav>
+            <!-- Lang Switch -->
+            <nav class="lang-switch" aria-label="Sélecteur de langue">
+               <button class="lang-btn" id="current-lang">
+               <img src="https://flagcdn.com/fr.svg" alt="FR"><span>Français</span>
+               </button>
+               <div class="lang-options" id="lang-options">
+                  <div data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="FR"> <span>Français</span></div>
+                  <div data-lang="ar"><img src="https://flagcdn.com/ma.svg" alt="AR"> <span>العربية</span></div>
+               </div>
+            </nav>
+         </div>
+</header>
 
-      <nav class="main-nav">
-        <button class="menu-toggle" aria-label="Menu">☰</button>
-        <ul class="nav-links">
-          <li><a href="/fr/#products">Produits</a></li>
-          <li><a href="/fr/#why">Pourquoi Nous</a></li>
-          <li><a href="/fr/#contact">Contactez-nous</a></li>
-        </ul>
-      </nav>
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Fil d’Ariane">
+      <a href="/fr/">Accueil</a>
+      <span aria-hidden="true">/</span>
+      <a href="/fr/#products">Produits</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Anti-Stress & Sommeil Profond</span>
+    </nav>
 
-      <nav class="lang-switch" aria-label="Langue">
-        <button class="lang-btn" id="current-lang">
-          <img src="https://flagcdn.com/fr.svg" alt="FR"> Français
-        </button>
-        <div class="lang-options" id="lang-options">
-          <div data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="FR"> Français</div>
-          <div data-lang="ar"><img src="https://flagcdn.com/ma.svg" alt="AR"> العربية</div>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container product-page">
-    <section class="product-detail" itemscope itemtype="https://schema.org/Product">
+    <!-- ===== Product ===== -->
+    <section class="product-wrap" itemscope itemtype="https://schema.org/Product">
+      <!-- Gallery with thumbs (you can remove thumbs if you want 1 image only) -->
       <div class="product-gallery">
-        <img src="../../../assets/images/products/mockup_capsule_main__3__02.webp"
-             alt="Anti-Stress & Sommeil Profond Calmoris" itemprop="image">
+        <div class="product-media">
+          <img id="product-main"
+               src="../../../assets/images/products/mockup_capsule_main__3__02.webp"
+               alt="Anti-Stress & Sommeil Profond Calmoris" itemprop="image" /> 
+        </div>
+
+        <div class="product-thumbs" role="list">
+          <button class="thumb is-active" data-src="../../../assets/images/products/mockup_capsule_main__3__02.webp" aria-label="Image 1">
+            <img src="../../../assets/images/products/mockup_capsule_main__3__02.webp" alt="Miniature 1">
+          </button>
+          <button class="thumb" data-src="../../../assets/images/products/mockup_capsule_main__3__03.webp" aria-label="Image 2">
+            <img src="../../../assets/images/products/mockup_capsule_main__3__03.webp" alt="Miniature 2">
+          </button>
+          <button class="thumb" data-src="../../../assets/images/products/mockup_capsule_main__3__04.webp" aria-label="Image 3">
+            <img src="../../../assets/images/products/mockup_capsule_main__3__04.webp" alt="Miniature 3">
+          </button>
+        </div>
       </div>
 
+      <!-- Info -->
       <div class="product-info">
-        <h1 itemprop="name">Anti-Stress & Sommeil Profond</h1>
-        <p class="subtitle">Relaxation, sérénité et sommeil réparateur</p>
+        <h1 class="product-title" itemprop="name">Anti-Stress & Sommeil Profond</h1>
 
-        <p itemprop="description">
+        <div class="rating-row" aria-label="Note moyenne 4.9 sur 5">
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+          <a href="#section-avis" class="rating-count">4.9 (128 avis)</a>
+        </div>
+
+        <p class="product-subtitle">Relaxation, sérénité et sommeil réparateur</p>
+
+        <p class="lead" itemprop="description">
           Le complément <strong>Calmoris Anti-Stress & Sommeil Profond</strong> aide à réduire le stress, calmer le mental et favoriser un sommeil naturel et profond.
           Sa formule à base de plantes apaisantes contribue à une meilleure détente et à une récupération complète.
         </p>
 
-        <ul class="benefits">
+        <ul class="bullets benefits">
           <li>🌿 Réduit naturellement le stress et l’anxiété</li>
           <li>💤 Améliore la qualité du sommeil</li>
           <li>🧘 Favorise la relaxation et l’équilibre émotionnel</li>
           <li>💪 Réduit la fatigue et augmente la vitalité</li>
         </ul>
 
-        <div class="product-footer">
-          <span class="price" itemprop="price" content="220">Prix : 220 DH</span>
-          <meta itemprop="priceCurrency" content="MAD">
-          <span  class="total-price">Total : <span id="total-price">220</span> DH</span>
+        <div class="price-row">
+          <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="MAD" />
+            <span class="current" itemprop="price" content="220">220</span> <span class="currency">DH</span>
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </span>
+          <span class="badge best-seller">Best-Seller</span>
+        </div>
 
+        <!-- Buy box merged with your WhatsApp flow -->
+        <form class="buy-box" action="#" method="post" onsubmit="return false;">
           <div class="quantity-control">
-            <button type="button" id="decrease">-</button>
-            <input type="number" id="quantity" value="1" min="1">
-            <button type="button" id="increase">+</button>
+  <div class="qty ">
+            <button type="button" class="qty-btn dec" aria-label="Diminuer">−</button>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" aria-label="Quantité">
+            <button type="button" class="qty-btn inc" aria-label="Augmenter">+</button>
           </div>
-
-          <a id="whatsapp-btn" href="#" target="_blank" class="buy-btn">
+          </div>
+          <a id="whatsapp-btn" href="#" target="_blank" class="btn-buy-now buy-btn">
             Acheter via WhatsApp 💬
           </a>
-        </div>
+
+          <div class="product-footer card-lite">
+            <span class="price-lite">Prix unitaire : <strong>220 DH</strong></span>
+            <span class="total-price">Total : <strong id="total-price">220</strong> DH</span>
+          </div>
+        </form>
       </div>
     </section>
 
-    <section class="product-extra">
-      <h2>Ingrédients Naturels</h2>
-      <p>
-        Extraits de Camomille, Valériane, Mélisse, L-théanine et Magnésium.
-        Ces composants agissent en synergie pour apaiser le système nerveux et
-        améliorer la qualité du sommeil sans dépendance ni somnolence diurne.
-      </p>
+    <!-- Tabs (optional content blocks) -->
+    <section class="product-tabs" data-tabs>
+      <nav class="tabs-nav" role="tablist" aria-label="Détails du produit">
+        <button role="tab" aria-selected="true" aria-controls="tab-desc" id="tab-desc-btn">Description</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-ing" id="tab-ing-btn">Ingrédients</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-usage" id="tab-usage-btn">Conseils</button>
+      </nav>
 
-      <h2>Conseils d’utilisation</h2>
-      <p>
-        Prenez 1 à 2 gélules 30 minutes avant le coucher avec un grand verre d’eau.
-        Ne pas dépasser la dose journalière recommandée.
-      </p>
+      <div id="tab-desc" role="tabpanel" aria-labelledby="tab-desc-btn">
+        <p>
+          Notre formule réunit des extraits apaisants pour relaxer le système nerveux et améliorer la qualité du sommeil
+          sans somnolence diurne. Idéal en périodes de stress.
+        </p>
+      </div>
+      <div id="tab-ing" role="tabpanel" aria-labelledby="tab-ing-btn" hidden>
+        <ul class="ing-list">
+          <li>Camomille</li>
+          <li>Valériane</li>
+          <li>Mélisse</li>
+          <li>L-théanine</li>
+          <li>Magnésium</li>
+        </ul>
+      </div>
+      <div id="tab-usage" role="tabpanel" aria-labelledby="tab-usage-btn" hidden>
+        <p>1 à 2 gélules 30 minutes avant le coucher, avec un grand verre d’eau. Ne pas dépasser la dose recommandée.</p>
+      </div>
     </section>
 
-    <section class="related-products">
-      <h2>Produits similaires</h2>
-      <div class="products">
-        <article class="product">
-          <img src="../../../assets/images/products/mockup_capsule_main__3__01.webp" alt="Migraines & Santé Nerveuse">
-          <h3>Migraines & Santé Nerveuse</h3>
-          <a href="/fr/produit-migraine.html" class="btn">Découvrir</a>
-        </article>
+    <!-- Avis -->
+    <section id="section-avis" class="reviews">
+      <h2>Avis Clients</h2>
+      <div class="review">
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p><strong>Yassine</strong> — “Résultats visibles dès la première semaine.”</p>
+      </div>
+    </section>
 
-        <article class="product">
-          <img src="../../../assets/images/products/mockup_capsule_main__3__04.webp" alt="Ashwagandha 500 mg">
-          <h3>Ashwagandha 500 mg</h3>
-          <a href="/fr/produit-ashwagandha.html" class="btn">Découvrir</a>
-        </article>
+    <!-- Produits liés -->
+    <section class="related">
+      <h2>Produits similaires</h2>
+      <div class="cards">
+        <a href="/fr/produit-migraine.html" class="card-link">
+          <div class="card">
+            <img src="../../../assets/images/products/mockup_capsule_main__3__01.webp" alt="Migraines & Santé Nerveuse" />
+            <div class="card-content">
+              <div><span class="card-title">Migraines & Santé Nerveuse</span></div>
+              <p class="card-description">Soutien ciblé & équilibre nerveux.</p>
+              <div class="card-footer">
+                <span class="buy-btn">Découvrir</span>
+                <span class="card-price">220 DH</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="/fr/produit-ashwagandha.html" class="card-link">
+          <div class="card">
+            <img src="../../../assets/images/products/mockup_capsule_main__3__04.webp" alt="Ashwagandha 500 mg" />
+            <div class="card-content">
+              <div><span class="card-title">Ashwagandha 500 mg</span></div>
+              <p class="card-description">Stress, énergie & focus.</p>
+              <div class="card-footer">
+                <span class="buy-btn">Découvrir</span>
+                <span class="card-price">220 DH</span>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Calmoris. Tous droits réservés.</p>
+      <p>© <span class="year">2025</span> Calmoris. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <script>
-    const productName = document.querySelector('[itemprop="name"]').innerText.trim();
-    const qtyInput = document.getElementById('quantity');
-    const increaseBtn = document.getElementById('increase');
-    const decreaseBtn = document.getElementById('decrease');
-    const whatsappBtn = document.getElementById('whatsapp-btn');
-    const totalPriceElement = document.getElementById('total-price');
-    const basePrice = parseInt(document.querySelector('[itemprop="price"]').getAttribute('content'));
-    const phoneNumber = "212600000000"; // replace with your WhatsApp number
+  <!-- Base JS from home (menu, lang, back-to-top, etc.) -->
+  <script src="../../../assets/js/home.js"></script>
+  <!-- Product JS -->
+  <script src="../../../assets/js/product.js"></script>
 
-   function updateTotalAndLink() {
-    
-    const quantity = parseInt(qtyInput.value) || 1;
-    const total = basePrice * quantity;
-    totalPriceElement.textContent = total;
-    const message = `Bonjour Calmoris, je souhaite commander ${quantity} ${quantity > 1 ? 'unités de' : 'un'} ${productName} Calmoris (Total: ${total} DH).`;
-    const encodedMessage = encodeURIComponent(message);
-    whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  <!-- JSON-LD Product (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Anti-Stress & Sommeil Profond",
+    "image":[
+      "https://www.calmoris.com/assets/images/products/mockup_capsule_main__3__02.webp"
+    ],
+    "description":"Complément naturel pour réduire le stress et améliorer la qualité du sommeil.",
+    "brand":{"@type":"Organization","name":"Calmoris"},
+    "sku":"CAL-ANTI-STRESS-60",
+    "offers":{
+      "@type":"Offer",
+      "url":"https://www.calmoris.com/fr/produit-sommeil.html",
+      "priceCurrency":"MAD",
+      "price":"220",
+      "availability":"https://schema.org/InStock"
+    },
+    "aggregateRating":{
+      "@type":"AggregateRating",
+      "ratingValue":"4.9",
+      "reviewCount":"128"
+    }
   }
-
-    increaseBtn.addEventListener('click', () => {
-      qtyInput.value = parseInt(qtyInput.value) + 1;
-      updateTotalAndLink();
-    });
-
-    decreaseBtn.addEventListener('click', () => {
-      if (parseInt(qtyInput.value) > 1) {
-        qtyInput.value = parseInt(qtyInput.value) - 1;
-        updateTotalAndLink();
-      }
-    });
-
-    qtyInput.addEventListener('input', updateWhatsAppLink);
-    updateWhatsAppLink();
   </script>
-
-  
 </body>
 </html>

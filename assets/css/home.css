@@ -635,7 +635,6 @@ footer {
 
 
 .calmoris-review-container {
-  width: 80%;
   margin: 50px auto;
   text-align: center;
 }
@@ -701,10 +700,11 @@ footer {
   background-color: #4CAF50;
 }
 .calmoris-review-content {
-    padding: 10px;
+     margin: 2px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     height: 181px;
+    padding: 9px;
 }
 /* ==============================
    📱 MOBILE STYLES (≤768px)

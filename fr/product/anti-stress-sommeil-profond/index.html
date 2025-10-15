@@ -16,18 +16,23 @@
   <meta property="og:image" content="https://www.calmoris.com/assets/images/products/mockup_capsule_main__3__02.webp">
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://www.calmoris.com/fr/produit-sommeil.html">
+  
+        <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="fr" href="https://calmoris.com/fr/produit-sommeil.html" />
   <link rel="alternate" hreflang="ar" href="https://calmoris.com/ar/produit-sommeil.html" />
-
+       
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="../../../assets/css/product.css" />
+  <link rel="stylesheet" href="../../../assets/css/product.css" /> 
+  <link rel="stylesheet" href="../../../assets/css/slider.css" /> 
 </head>
 <body class="product-page">
  <header>
@@ -110,7 +115,7 @@
         <!-- Buy box merged with your WhatsApp flow -->
         <form class="buy-box" action="#" method="post" onsubmit="return false;">
           <div class="quantity-control">
-  <div class="qty ">
+          <div class="qty ">
             <button type="button" class="qty-btn dec" aria-label="Diminuer">−</button>
             <input type="number" id="quantity" name="quantity" value="1" min="1" aria-label="Quantité">
             <button type="button" class="qty-btn inc" aria-label="Augmenter">+</button>
@@ -188,14 +193,113 @@
 </section>
 
 
-    <!-- Avis -->
-    <section id="section-avis" class="reviews">
-      <h2>Avis Clients</h2>
-      <div class="review">
-        <p class="stars">⭐⭐⭐⭐⭐</p>
-        <p><strong>Yassine</strong> — “Résultats visibles dès la première semaine.”</p>
+  <!-- Avis -->
+<div class="calmoris-review-container">
+  <h2>Découvrez nos clients apaisés et bien reposés 😴</h2>
+
+  <!-- Swiper Container -->
+  <div class=" swiper  swiper-container  calmoris-review-slider ">
+    <div class="swiper-wrapper ">
+
+      <!-- Review 1 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Samira</p>
+          <p>Je dors enfin profondément sans me réveiller la nuit ! Calmoris est devenu mon rituel du soir incontournable.</p>
+        </div>
       </div>
-    </section>
+
+      <!-- Review 2 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Nabil</p>
+          <p>Produit naturel et très efficace. Mon stress a diminué dès la première semaine, et je me sens plus détendu.</p>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Inès</p>
+          <p>J’étais sceptique au début, mais après 10 jours d’utilisation, mes nuits sont beaucoup plus calmes. Je recommande à 100 % !</p>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Omar</p>
+          <p>Le mélange de mélatonine, camomille et magnésium fonctionne à merveille. Sommeil profond garanti !</p>
+        </div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Sara</p>
+          <p>Je me réveille reposée et sans anxiété. C’est rare de trouver un complément aussi doux et efficace.</p>
+        </div>
+      </div>
+
+      <!-- Review 6 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Youssef</p>
+          <p>J’ai testé plusieurs marques, mais Calmoris est la seule qui m’aide vraiment à m’endormir rapidement.</p>
+        </div>
+      </div>
+
+      <!-- Review 7 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Lamia</p>
+          <p>Très bon produit ! Je sens une vraie différence dans ma qualité de sommeil. Plus d’insomnies.</p>
+        </div>
+      </div>
+
+      <!-- Review 8 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Karim</p>
+          <p>Je le prends depuis un mois, et mon niveau de stress au travail a nettement baissé. Merci Calmoris !</p>
+        </div>
+      </div>
+
+      <!-- Review 9 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Amina</p>
+          <p>J’adore le côté naturel. Pas d’effets secondaires, juste un sommeil paisible chaque nuit.</p>
+        </div>
+      </div>
+
+      <!-- Review 10 -->
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">Hassan</p>
+          <p>Parfait après une longue journée stressante. Deux capsules et je m’endors comme un bébé 💤</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <!-- Pagination & Navigation -->
+    <div class="swiper-pagination"></div> 
+  </div>
+</div>
 
     <!-- Produits liés -->
     <section class="related">
@@ -267,9 +371,6 @@
     <p class="copyright">© <span class="year">2025</span>, <span class="brand">CALMORIS</span></p>
   </footer>
   </footer>
-
-  <!-- Base JS from home (menu, lang, back-to-top, etc.) -->
-  <script src="../../../assets/js/home.js"></script>
   <!-- Product JS -->
   <script src="../../../assets/js/product.js"></script>
 
@@ -298,6 +399,32 @@
       "reviewCount":"128"
     }
   }
+  </script>
+    <!-- Product JS -->
+  <script src="../../../assets/js/product.js"></script>
+  <script src="../assets/js/home.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+ 
+  var swiper2 = new Swiper('.calmoris-review-slider', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+ 
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    }
+  });
   </script>
 </body>
 </html>

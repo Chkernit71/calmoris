@@ -964,6 +964,13 @@ footer {
   .list-social {
     display: none;
   } 
+.product-page .buy-box {
+    grid-template-columns: 1fr auto;
+}
+  .quantity-control , .product-page .btn-buy-now.buy-btn{
+   
+    justify-self: center;
+  }
 }
 
 @media (max-width: 480px) {

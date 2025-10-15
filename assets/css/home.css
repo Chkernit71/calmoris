@@ -706,6 +706,14 @@ footer {
     height: 181px;
     padding: 9px;
 }
+.contact-us > span {
+    margin-left: 8px;
+  font-size: 25px;
+}
+.contact-us a i {
+    margin-right: 8px;
+    color: var(--dark);
+} 
 /* ==============================
    📱 MOBILE STYLES (≤768px)
 ============================== */

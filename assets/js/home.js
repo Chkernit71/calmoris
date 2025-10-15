@@ -14,7 +14,7 @@ langOptions.querySelectorAll('div').forEach(option => {
 
     // Redirect to correct version
     if (lang === 'fr') {
-      window.location.href = '/fr/';
+      window.location.href = '/';
     } else if (lang === 'ar') {
       window.location.href = '/ar/';
     }

@@ -27,7 +27,7 @@ body.product-page {
   box-shadow: 0 8px 25px rgba(0,0,0,.06);
   padding: 18px; text-align: center;
 }
-.product-page .product-media img { width: 50%; max-width: 560px; object-fit: contain; }
+.product-page .product-media img { width: 100%; max-width: 560px; object-fit: contain; }
 .product-page .zoom-btn {
   position: absolute; right: 14px; bottom: 14px;
   background: #111; color: #fff; border: 0; border-radius: 999px;
@@ -79,11 +79,45 @@ body.product-page {
 
 .product-page .btn-buy-now.buy-btn {
   justify-self: end;
-  background: #16a34a; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 999px; font-weight: 800;
-  box-shadow: 0 4px 8px rgba(22,163,74,.3); transition: transform .12s ease, box-shadow .12s ease;
+  background: #16a34a;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: heartbeat 1.5s ease-in-out infinite;
 }
-.product-page .btn-buy-now:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(22,163,74,.35); }
 
+/* ✅ Smooth Heartbeat Animation */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  }
+  25% {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    transform: scale(0.95);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  }
+  75% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(37, 211, 102, 0.45);
+  }
+}
+
+/* Optional hover effect */
+.product-page .btn-buy-now.buy-btn:hover {
+  background: #22c55e;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.6);
+  transform: scale(1.08);
+}
+ 
 .product-page .product-footer.card-lite {
   grid-column: 1 / -1; margin-top: 4px;
   padding: 12px 14px; border-radius: 12px; border: 1px solid #eee; background: #fff;
@@ -163,7 +197,7 @@ body {
   gap: 1rem;
   position: relative;
   z-index: 1000;
-  background: var(--light);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 .logo img {
@@ -186,9 +220,8 @@ body {
   gap: 8px;
   padding: 6px 12px;
   border-radius: 6px;
-  border: none;
-  background: var(--secondary);
-  color: var(--light);
+  border: none; 
+  color: var(--dark);
   font-weight: bold;
   cursor: pointer;
 }
@@ -241,9 +274,8 @@ body {
 
 /* Menu toggle (hidden on desktop) */
 .menu-toggle {
-  display: none;
-  background: var(--secondary);
-  color: var(--light);
+  display: none; 
+  color: var(--dark);
   font-size: 1.5rem;
   border: none;
   padding: 6px 12px;

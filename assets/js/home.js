@@ -21,7 +21,6 @@ langOptions.querySelectorAll('div').forEach(option => {
   });
 });
 
-
   // Mobile menu toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const mainMenu = document.querySelector('.main-nav ul');

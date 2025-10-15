@@ -66,9 +66,8 @@ body {
   gap: 8px;
   padding: 6px 12px;
   border-radius: 6px;
-  border: none;
-  background: var(--secondary);
-  color: var(--light);
+  border: none; 
+  color: var(--dark);
   font-weight: bold;
   cursor: pointer;
 }
@@ -121,9 +120,8 @@ body {
 
 /* Menu toggle (hidden on desktop) */
 .menu-toggle {
-  display: none;
-  background: var(--secondary);
-  color: var(--light);
+  display: none; 
+  color: var(--dark);
   font-size: 1.5rem;
   border: none;
   padding: 6px 12px;
@@ -726,6 +724,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 3px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
   }
   .logo img {
     width: 82px;

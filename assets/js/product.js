@@ -31,7 +31,7 @@ const whatsappBtn = document.getElementById('whatsapp-btn');
 const totalPriceEl = document.getElementById('total-price');
 const unitPrice = parseInt(document.querySelector('[itemprop="price"]')?.getAttribute('content') || '220', 10);
 // ⚠️ Replace with your actual WhatsApp number, digits only:
-const phoneNumber = '212600000000';
+const phoneNumber = '212776703475';
 
 function updateTotalAndLink() {
   const q = Math.max(1, parseInt(qtyInput.value || '1', 10));

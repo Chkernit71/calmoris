@@ -1119,12 +1119,6 @@ a, button {
   outline-offset: 2px;
 }
 
-/* Optional: subtle backdrop blur for menus (Safari needs -webkit-) */
-.lang-options {
-  -webkit-backdrop-filter: saturate(180%) blur(8px);
-  backdrop-filter: saturate(180%) blur(8px);
-}
-
 /* Prevent font zooming on landscape iPhone */
 @media screen and (max-device-width: 812px) and (orientation: landscape) {
   html { -webkit-text-size-adjust: 100%; }

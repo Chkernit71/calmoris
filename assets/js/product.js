@@ -1,5 +1,6 @@
+
 // ===== Image gallery (thumb swap) =====
-const mainImg = document.getElementById('product-main');
+var mainImg = document.getElementById('product-main');
 document.querySelectorAll('.product-thumbs .thumb').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.product-thumbs .thumb').forEach(b => b.classList.remove('is-active'));
@@ -10,35 +11,35 @@ document.querySelectorAll('.product-thumbs .thumb').forEach(btn => {
 });
 
 // ===== Tabs (ARIA-friendly) =====
-const tabBtns = document.querySelectorAll('.tabs-nav [role="tab"]');
-const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+var  tabBtns = document.querySelectorAll('.tabs-nav [role="tab"]');
+var  tabPanels = document.querySelectorAll('[role="tabpanel"]');
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     tabBtns.forEach(b => b.setAttribute('aria-selected', 'false'));
     tabPanels.forEach(p => p.hidden = true);
     btn.setAttribute('aria-selected', 'true');
-    const target = document.getElementById(btn.getAttribute('aria-controls'));
+    var  target = document.getElementById(btn.getAttribute('aria-controls'));
     if (target) target.hidden = false;
   });
 });
 
 // ===== WhatsApp buy flow (merged & fixed) =====
-const productName = document.querySelector('[itemprop="name"]')?.textContent.trim() || 'Produit Calmoris';
-const qtyInput = document.getElementById('quantity');
-const incBtn = document.querySelector('.qty .inc');
-const decBtn = document.querySelector('.qty .dec');
-const whatsappBtn = document.getElementById('whatsapp-btn');
-const totalPriceEl = document.getElementById('total-price');
-const unitPrice = parseInt(document.querySelector('[itemprop="price"]')?.getAttribute('content') || '220', 10);
+var  productName = document.querySelector('[itemprop="name"]')?.textContent.trim() || 'Produit Calmoris';
+var  qtyInput = document.getElementById('quantity');
+var  incBtn = document.querySelector('.qty .inc');
+var  decBtn = document.querySelector('.qty .dec');
+var  whatsappBtn = document.getElementById('whatsapp-btn');
+var  totalPriceEl = document.getElementById('total-price');
+var  unitPrice = parseInt(document.querySelector('[itemprop="price"]')?.getAttribute('content') || '220', 10);
 // ⚠️ Replace with your actual WhatsApp number, digits only:
-const phoneNumber = '212776703475';
+var  phoneNumber = '212776703475';
 
 function updateTotalAndLink() {
-  const q = Math.max(1, parseInt(qtyInput.value || '1', 10));
-  const total = unitPrice * q;
+  var  q = Math.max(1, parseInt(qtyInput.value || '1', 10));
+  var  total = unitPrice * q;
   totalPriceEl.textContent = String(total);
-  const message = `Bonjour Calmoris, je souhaite commander ${q} ${q > 1 ? 'unités de' : 'un'} ${productName} (Total: ${total} DH).`;
-  const encoded = encodeURIComponent(message);
+  var  message = `Bonjour Calmoris, je souhaite commander ${q} ${q > 1 ? 'unités de' : 'un'} ${productName} (Total: ${total} DH).`;
+  var  encoded = encodeURIComponent(message);
   whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encoded}`;
 }
 
@@ -46,3 +47,41 @@ incBtn?.addEventListener('click', () => { qtyInput.value = Math.max(1, (parseInt
 decBtn?.addEventListener('click', () => { qtyInput.value = Math.max(1, (parseInt(qtyInput.value || '1', 10) - 1)); updateTotalAndLink(); });
 qtyInput?.addEventListener('input', updateTotalAndLink);
 updateTotalAndLink();
+
+// Language switcher
+var  currentLangBtn = document.getElementById('current-lang');
+var  langOptions = document.getElementById('lang-options');
+
+// Toggle dropdown
+currentLangBtn.addEventListener('click', () => {
+  langOptions.style.display = langOptions.style.display === 'block' ? 'none' : 'block';
+});
+
+// Handle language selection
+langOptions.querySelectorAll('div').forEach(option => {
+  option.addEventListener('click', () => {
+    var  lang = option.getAttribute('data-lang');
+
+    // Redirect to correct version
+    if (lang === 'fr') {
+      window.location.href = '/';
+    } else if (lang === 'ar') {
+      window.location.href = '/ar/';
+    }
+  });
+});
+
+  // Mobile menu toggle
+  var  menuToggle = document.querySelector('.menu-toggle');
+  var  mainMenu = document.querySelector('.main-nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    mainMenu.classList.toggle('show');
+
+    // toggle icon ☰ <-> ✖
+    if (mainMenu.classList.contains('show')) {
+      menuToggle.textContent = '✖';
+    } else {
+      menuToggle.textContent = '☰';
+    }
+  });

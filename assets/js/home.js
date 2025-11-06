@@ -80,8 +80,8 @@ accordions.forEach(accordion => {
 });
 
 const messages = [ 
-   "Le secret d'un sommeil profond et naturel commence ici.😴",
-    "Livraison GRATUITE",
+   "Votre nuit parfaite commence ici.😴",
+    "Livraison GRATUITE 🚚",
     "100% Naturel et Bio 🌿",
     "Support Client 24/7 📞",
      "Satisfaction Garantie ou Remboursé 💯"

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      text-align: center;
+      padding: 5%;
+    }
+    h1 {
+      font-size: 5rem;
+      color: #0073e6;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #0073e6;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    a:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+  <h1>404</h1>
+  <p>Oops! The page you're looking for doesn’t exist.</p>
+  <a href="/">Go back home</a>
+
+  <script>
+    // Optional redirect example (for language folders, etc.)
+    if (window.location.pathname.startsWith('/fr')) {
+      window.location.href = '/';
+    }
+  </script>
+</body>
+</html>

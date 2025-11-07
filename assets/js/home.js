@@ -36,26 +36,6 @@ langOptions.querySelectorAll('div').forEach(option => {
     }
   });
 
- const backToTopBtn = document.getElementById('backToTop');
-
-  // Show button after scrolling down
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add('show');
-    } else {
-      backToTopBtn.classList.remove('show');
-    }
-  });
-
-  // Smooth scroll to top
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-
   // Get all accordion buttons
 const accordions = document.querySelectorAll('.calmoris-accordion');
 
@@ -79,7 +59,7 @@ accordions.forEach(accordion => {
   });
 });
 
-const messages_fr = [ 
+var messages = [ 
    "Votre nuit parfaite commence ici.😴",
     "Livraison GRATUITE 🚚",
     "100% Naturel et Bio 🌿",
@@ -88,7 +68,7 @@ const messages_fr = [
   ];
 
  
-const messages_ar = [ 
+var messages_ar = [ 
   "ليلتك المثالية تبدأ من هنا 😴",
   "توصيل مجاني 🚚",
   "طبيعي وعضوي 100٪ 🌿",

@@ -435,7 +435,7 @@ footer {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 31px;
+    font-size: 35px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
@@ -454,7 +454,6 @@ footer {
   opacity: 1;
   visibility: visible;
 }
-
 
 .scrolling-bar {
   background-color: #111;
@@ -478,14 +477,6 @@ footer {
   margin-right: 50px; /* Space between each text span */
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(5%); /* Start the text off-screen to the right */
-  }
-  100% {
-    transform: translateX(-100%); /* Move the text off-screen to the left */
-  }
-}
 .icon-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1015,7 +1006,7 @@ a, button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: var(--footer-text);
+      color: white;
       opacity: .9;
       transition: transform .15s ease, opacity .2s ease;
       text-decoration-line: none;

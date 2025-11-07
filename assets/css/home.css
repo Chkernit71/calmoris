@@ -14,13 +14,13 @@
       --brand: "BIONUVA";
       --year: "2025";
 }
-
+ 
 body {
   margin: 0;
-  font-family: "Funnel Sans", sans-serif;
+  font-family: 'Cairo', sans-serif;
   background: var(--light);
   color: var(--dark);
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* ==============================

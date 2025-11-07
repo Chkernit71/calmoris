@@ -1,0 +1,9 @@
+         * { font-family: 'Cairo', sans-serif; }
+         body { direction: rtl; text-align: right; }
+         .utility-bar__grid { direction: rtl; }
+         .list-social { padding-right: 0; }
+         .nav-links { text-align: right; }
+         .card-footer { flex-direction: row-reverse; }
+        .lang-options {
+         right: calc(100% - 130px) !important;
+        }

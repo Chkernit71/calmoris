@@ -1,442 +1,449 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>كالموريس – منتجات طبيعية وصحّة ورفاه</title>
-    <meta name="description" content="اكتشف كالموريس: منتجات طبيعية مختارة بعناية لتحسين يومك بجودة وأناقة وراحة. توصيل سريع ورضا مضمون." />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="كالموريس – منتجات طبيعية وصحّة ورفاه" />
-    <meta property="og:description" content="منتجات طبيعية عالية الجودة، توصيل سريع ورضا مضمون." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.calmoris.com/ar/" />
-    <meta property="og:image" content="../assets/calmoris.webp" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/home.css" />
-    <link rel="stylesheet" href="../assets/css/slider.css" />
-
-    <!-- Alternates -->
-    <link rel="alternate" hreflang="fr" href="https://calmoris.com/fr/" />
-    <link rel="alternate" hreflang="ar" href="https://calmoris.com/ar/" />
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Arabic-friendly UI font -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
-
-    <!-- Font Awesome -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
-
-    <!-- RTL helpers (optional, safe) -->
-    <style>
-      body { font-family: "Tajawal", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-      /* Ensure nav/links visually read RTL when flex is used */
-      .main-nav .nav-links,
-      .footer-links { flex-direction: row-reverse; }
-      .footer-links a { text-decoration: none; }
-      /* Guard against global font overrides hiding FA icons */
-      .fa-brands, .fab { font-family: "Font Awesome 6 Brands" !important; font-weight: 400 !important; }
-      .fa-solid, .fas  { font-family: "Font Awesome 6 Free"   !important; font-weight: 900 !important; }
-      .fa-regular, .far{ font-family: "Font Awesome 6 Free"   !important; font-weight: 400 !important; }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="container top-bar">
-        <div class="logo">
-          <img src="../assets/calmoris.webp" alt="شعار كالموريس – منتجات طبيعية" />
-        </div>
-
-        <!-- Navigation Menu -->
-        <nav class="main-nav" aria-label="التنقل الرئيسي">
-          <button class="menu-toggle" aria-label="القائمة">☰</button>
-          <ul class="nav-links">
-            <li><a href="#products">المنتجات</a></li>
-            <li><a href="#why">لماذا نحن</a></li>
-            <li><a href="#contact">اتصل بنا</a></li>
-          </ul>
-        </nav>
-
-        <!-- Language Switch -->
-        <nav class="lang-switch" aria-label="اختيار اللغة">
-          <button class="lang-btn" id="current-lang">
-            <img src="https://flagcdn.com/ma.svg" alt="AR" /><span>العربية</span>
-          </button>
-          <div class="lang-options" id="lang-options">
-            <div data-lang="ar"><img src="https://flagcdn.com/ma.svg" alt="AR" /> <span>العربية</span></div>
-            <div data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="FR" /> <span>Français</span></div>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <main class="container">
-      <!-- Hero Slider -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="hero-slide" style="background-image: url('../assets/images/slider/calmoris-slider.png');">
-              <a href="#" class="hero-btn">اشترِ الآن</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="hero-slide" style="background-image: url('../assets/images/slider/calmoris-slider2.png');">
-              <a href="#" class="hero-btn">اشترِ الآن</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="hero-slide" style="background-image: url('../assets/images/slider/calmoris-slider.png');">
-              <a href="#" class="hero-btn">اشترِ الآن</a>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>كالموريس – منتجات طبيعية وصحة</title>
+      <meta name="description" content="اكتشف كالموريس: منتجات طبيعية مختارة بعناية لتحسين صحتك اليومية بجودة وأناقة وراحة. توصيل سريع ورضا مضمون.">
+      <meta name="robots" content="index, follow">
+      <link rel="stylesheet" href="../assets/css/home.css"> 
+      <link rel="stylesheet" href="../assets/css/slider.css">
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+      <style>
+         * { font-family: 'Cairo', sans-serif; }
+         body { direction: rtl; text-align: right; }
+         .utility-bar__grid { direction: rtl; }
+         .list-social { padding-right: 0; }
+         .nav-links { text-align: right; }
+         .card-footer { flex-direction: row-reverse; }
+      </style>
+   </head>
+   <body>
+      <header>
+        <div class="utility-bar color-scheme-4 gradient utility-bar--bottom-border">
+          <div class="page-width utility-bar__grid utility-bar__grid--3-col">
+            <ul class="list-unstyled list-social" role="list">
+              <li class="list-social__item">
+                <a href="https://www.facebook.com/calmoris.officielle" class="link list-social__link" aria-label="فيسبوك" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-social__item">
+                <a href="https://www.instagram.com/calmoris_officielle" class="link list-social__link" aria-label="إنستغرام" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-social__item">
+                <a href="https://www.tiktok.com/@calmoris" class="link list-social__link" aria-label="تيك توك" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="announcement-slider">
+              <button class="slider-btn prev" aria-label="الإعلان السابق"><i class="fa-solid fa-angle-right"></i></button>
+              <p class="announcement-message"><span class="text">ليلتك المثالية تبدأ من هنا 😴</span></p>
+              <button class="slider-btn next" aria-label="الإعلان التالي"><i class="fa-solid fa-angle-left"></i></button>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Scrolling announcement -->
-      <div class="scrolling-bar" aria-label="شريط إعلانات">
-        <div class="scrolling-text">
-          <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
-          <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
-          <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
-          <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
-          <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
-          <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
-          <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
-          <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
-        </div>
-      </div>
-
-      <!-- Why Us Icons -->
-      <div class="icon-container" id="why">
-        <div class="icon-box">
-          <div class="icon-wrapper">
-            <img src="../assets/images/whyus/natural.webp" alt="100% طبيعي" />
-          </div>
-          <p>100% طبيعي</p>
-        </div>
-        <div class="icon-box">
-          <div class="icon-wrapper">
-            <img src="../assets/images/whyus/halal_kyv84d.png" alt="حلال 100%" />
-          </div>
-          <p>حلال 100%</p>
-        </div>
-        <div class="icon-box">
-          <div class="icon-wrapper">
-            <img src="../assets/images/whyus/iso22000_1.webp" alt="ISO 22000" />
-          </div>
-          <p>ISO 22000</p>
-        </div>
-        <div class="icon-box">
-          <div class="icon-wrapper">
-            <img src="../assets/images/whyus/onsa-removebg-preview_ace92596-48bf-4f15-8003-7a0374d10070.webp" alt="معتمدون 100%" />
-          </div>
-          <p>معتمدون 100%</p>
-        </div>
-      </div>
-
-      <!-- Products -->
-      <section id="products">
-        <h2>منتجاتنا الطبيعية – كالموريس</h2>
-
-        <div class="cards">
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3__01.webp" alt="كالموريس للصداع النصفي وصحّة الأعصاب" />
-            <div class="card-content">
-              <div><span class="card-title">الصداع النصفي وصحّة الأعصاب</span></div>
-              <p class="card-description">تخفيف طبيعي للصداع النصفي.</p>
-              <div class="card-footer">
-                <a href="/ar/product/migraines-sante-nerveuse" class="buy-btn">اشترِ</a>
-                <span class="card-price">222 درهم</span>
-              </div>
+         <div class="container top-bar">
+            <div class="logo">
+              <a href="/ar"> 
+               <img src="../assets/calmoris.webp" alt="شعار كالموريس – منتجات طبيعية">
+              </a>
             </div>
-          </div>
-
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3__02.webp" alt="مضاد للتوتر ونوم عميق" />
-            <div class="card-content">
-              <div><span class="card-title">مضاد للتوتر ونوم عميق</span></div>
-              <p class="card-description">استرخاء ونوم مريح.</p>
-              <div class="card-footer">
-                <a href="/ar/product/anti-stress-sommeil-profond" class="buy-btn">اشترِ</a>
-                <span class="card-price">220 درهم</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3__03.webp" alt="كافيين + فيتامين C" />
-            <div class="card-content">
-              <div><span class="card-title">كافيين + فيتامين C</span></div>
-              <p class="card-description">طاقة وتركيز.</p>
-              <div class="card-footer">
-                <a href="/ar/produit-cafeine-vitaminec.html" class="buy-btn">اشترِ</a>
-                <span class="card-price">222 درهم</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3__04.webp" alt="أشواغاندا 500 ملغ" />
-            <div class="card-content">
-              <div><span class="card-title">أشواغاندا 500 ملغ</span></div>
-              <p class="card-description">حيوية ومقاومة للتوتر.</p>
-              <div class="card-footer">
-                <a href="/ar/produit-ashwagandha.html" class="buy-btn">اشترِ</a>
-                <span class="card-price">220 درهم</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3__05.webp" alt="تعزيز المناعة" />
-            <div class="card-content">
-              <div><span class="card-title">تعزيز المناعة</span></div>
-              <p class="card-description">حماية طبيعية للجسم.</p>
-              <div class="card-footer">
-                <a href="/ar/produit-immunitaire.html" class="buy-btn">اشترِ</a>
-                <span class="card-price">222 درهم</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3__07.webp" alt="مغنيسيوم غليسينات" />
-            <div class="card-content">
-              <div><span class="card-title">مغنيسيوم غليسينات</span></div>
-              <p class="card-description">نوم واسترخاء.</p>
-              <div class="card-footer">
-                <a href="/ar/produit-magnesium-glycinate.html" class="buy-btn">اشترِ</a>
-                <span class="card-price">217.99 درهم</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3__06.webp" alt="مغنيسيوم B6" />
-            <div class="card-content">
-              <div><span class="card-title">مغنيسيوم B6</span></div>
-              <p class="card-description">توازن عصبي.</p>
-              <div class="card-footer">
-                <a href="/ar/produit-magnesium-b6.html" class="buy-btn">اشترِ</a>
-                <span class="card-price">219 درهم</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3__08.webp" alt="متعدد الفيتامينات" />
-            <div class="card-content">
-              <div><span class="card-title">متعدد الفيتامينات</span></div>
-              <p class="card-description">حيوية يومية.</p>
-              <div class="card-footer">
-                <a href="/ar/produit-multivitamines.html" class="buy-btn">اشترِ</a>
-                <span class="card-price">222 درهم</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="../assets/images/products/mockup_capsule_main__3_09.webp" alt="نوم طبيعي" />
-            <div class="card-content">
-              <div><span class="card-title">نوم طبيعي</span></div>
-              <p class="card-description">ميلاتونين وفليريان.</p>
-              <div class="card-footer">
-                <a href="/ar/produit-sommeil-naturel.html" class="buy-btn">اشترِ</a>
-                <span class="card-price">226 درهم</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Us (Accordion) -->
-      <section id="why-details">
-        <div class="calmoris-header">
-          <h1>كالموريس – طبيعي 100% ونقي</h1>
-          <p>🌿 اترك للطبيعة أن تعتني بك مع منتجاتنا العضوية والطبيعية 100%.</p>
-        </div>
-
-        <div class="calmoris-faq-container">
-          <h2>لماذا كالموريس؟</h2>
-
-          <div class="calmoris-faq-item">
-            <button class="calmoris-accordion">أفضل جودة <span class="arrow">↓</span></button>
-            <div class="calmoris-panel">
-              <p>مع كالموريس ستحصل على أفضل جودة من مكملات طبيعية مختارة بعناية لتمنحك الفاعلية والراحة في يومك.</p>
-            </div>
-          </div>
-
-          <div class="calmoris-faq-item">
-            <button class="calmoris-accordion">أفضل سعر <span class="arrow">↓</span></button>
-            <div class="calmoris-panel">
-              <p>استمتع بأفضل الأسعار دون التنازل عن الجودة! منتجاتنا تجمع بين التميز وسهولة الوصول.</p>
-            </div>
-          </div>
-
-          <div class="calmoris-faq-item">
-            <button class="calmoris-accordion">الدفع عند الاستلام <span class="arrow">↓</span></button>
-            <div class="calmoris-panel">
-              <p>ادفع بكل بساطة عند الاستلام لتجربة شراء آمنة وخالية من القلق.</p>
-            </div>
-          </div>
-
-          <div class="calmoris-faq-item">
-            <button class="calmoris-accordion">نتواصل معك 7 أيام/أسبوع <span class="arrow">↓</span></button>
-            <div class="calmoris-panel">
-              <p>فريق دعم متواجد دائمًا للإجابة على أسئلتك بسرعة وكفاءة، طوال الأسبوع.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Reviews -->
-      <div class="calmoris-review-container">
-        <h2>اكتشف آراء عملائنا</h2>
-
-        <div class="swiper-container calmoris-review-slider">
+            <nav class="main-nav">
+               <button class="menu-toggle" aria-label="القائمة">☰</button>
+               <ul class="nav-links">
+                  <li><a href="#products">المنتجات</a></li>
+                  <li><a href="#why">لماذا نحن</a></li>
+                  <li><a href="#contact">تواصل معنا</a></li>
+               </ul>
+            </nav>
+            <nav class="lang-switch" aria-label="اختيار اللغة">
+               <button class="lang-btn" id="current-lang">
+               <img src="https://flagcdn.com/ma.svg" alt="AR"><span>العربية</span>
+               </button>
+               <div class="lang-options" id="lang-options">
+                  <div data-lang="ar"><img src="https://flagcdn.com/ma.svg" alt="AR"> <span>العربية</span></div>
+                  <div data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="FR"> <span>Français</span></div>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <main class="container">
+         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Yassine</p>
-                <p>منتج ممتاز! لاحظت تحسنًا في طاقتي منذ الأسبوع الأول.</p>
+              <div class="swiper-slide">
+                <div class="hero-slide" style="background-image: url('../assets/images/slider/calmoris-slider.webp');">
+                    <a href="https://calmoris.com/ar/product/sommeil-naturel/" class="hero-btn">اشتر الآن</a>
+                </div>
               </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Khadija</p>
-                <p>هذه المكملات غيرت روتيني اليومي فعلًا. أشعر بالنشاط أكثر.</p>
+              <div class="swiper-slide">
+                <div class="hero-slide" style="background-image: url('../assets/images/slider/calmoris-slider2.webp');">
+                    <a href="/#products" class="hero-btn">اشتر الآن</a>
+                </div>
               </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Soukaina</p>
-                <p>جودة رائعة وتوصيل سريع. أنصح بها بشدة!</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Reda</p>
-                <p>راضٍ جدًا عن الشراء. النتائج ظهرت بعد أسابيع قليلة.</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Sarah</p>
-                <p>أحببت الطعم وسهولة الاستخدام. أصبح جزءًا من روتيني الصحي.</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Mohamed</p>
-                <p>خدمة عملاء ممتازة! أجابوا على كل أسئلتي بسرعة.</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Amine</p>
-                <p>أصبحت أكثر تركيزًا وأقل تعبًا في العمل منذ أن بدأت باستخدامه.</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Lina</p>
-                <p>تجربة شراء رائعة، الموقع واضح والتوصيل سريع جدًا.</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Hicham</p>
-                <p>بعد شهر لاحظت فرقًا حقيقيًا في مستوى الطاقة. أحسنتم!</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide calmoris-review-item">
-              <div class="calmoris-review-content">
-                <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
-                <p class="calmoris-reviewer">Imane</p>
-                <p>منتج طبيعي وفعّال، بالضبط ما كنت أبحث عنه.</p>
-              </div>
-            </div>
           </div>
+         </div>
+         <div class="scrolling-bar">
+            <div class="scrolling-text">
+               <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
+               <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
+               <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
+               <span>انضم إلى أكثر من 20,000 عميل راضٍ!</span>
+            </div>
+         </div>
+         <div class="icon-container">
+            <div class="icon-box">
+               <div class="icon-wrapper">
+                  <img src="https://calmoris.com/assets/images/whyus/natural.webp" alt="100% طبيعي" />
+               </div>
+               <p>100% طبيعي</p>
+            </div>
+            <div class="icon-box">
+               <div class="icon-wrapper">
+                  <img src="https://calmoris.com/assets/images/whyus/halal_kyv84d.png" alt="100% حلال" />
+               </div>
+               <p>100% حلال</p>
+            </div>
+            <div class="icon-box">
+               <div class="icon-wrapper"> 
+                  <img src="https://calmoris.com/assets/images/whyus/iso22000_1.webp" alt="ISO 22000" />
+               </div>
+               <p>ISO 22000</p>
+            </div>
+            <div class="icon-box">
+               <div class="icon-wrapper">
+                  <img src="https://calmoris.com/assets/images/whyus/onsa-removebg-preview_ace92596-48bf-4f15-8003-7a0374d10070.webp" alt="100% معتمد" />
+               </div>
+               <p>100% معتمد</p>
+            </div>
+         </div>
 
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
+<section id="products">
+  <h2>مكملاتنا الغذائية الطبيعية – كالموريس</h2>
+  <div class="cards">
+
+    <a href="/ar/product/migraines-sante-nerveuse" class="card-link">
+      <div class="card">
+        <img src="../assets/images/products/mockup_capsule_main__3__01.webp" alt="الشقيقة والصحة العصبية كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">الشقيقة والصحة العصبية</span>
+          </div>
+          <p class="card-description">تخفيف طبيعي للصداع النصفي</p>
+          <div class="card-footer">
+            <span class="card-price">222 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
         </div>
       </div>
-    </main>
+    </a>
 
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
-      <nav class="footer-links" aria-label="روابط التذييل">
-        <a href="#" title="اتصل بنا">اتصل بنا</a>
-        <a href="#" title="من نحن">من نحن</a>
-      </nav>
-
-      <div class="social" aria-label="روابط التواصل الاجتماعي">
-        <a href="#" aria-label="فيسبوك" title="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-        <a href="#" aria-label="إنستغرام" title="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-        <a href="#" aria-label="تيك توك" title="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
-        <a href="#" aria-label="إكس (تويتر)" title="X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+    <a href="/ar/product/anti-stress-sommeil-profond" class="card-link">
+      <div class="card">
+        <img src="../assets/images/products/mockup_capsule_main__3__02.webp" alt="مضاد للتوتر ونوم عميق كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">مضاد للتوتر ونوم عميق</span>
+          </div>
+          <p class="card-description">استرخاء ونوم مريح</p>
+          <div class="card-footer">
+            <span class="card-price">220 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
+        </div>
       </div>
+    </a>
 
-      <hr class="footer-divider" />
+    <a href="/ar/product/cafeine-vitaminec" class="card-link">
+      <div class="card">
+        <img src="../assets/images/products/mockup_capsule_main__3__03.webp" alt="كافيين + فيتامين C كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">كافيين + فيتامين C</span>
+          </div>
+          <p class="card-description">طاقة وتركيز</p>
+          <div class="card-footer">
+            <span class="card-price">222 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
+        </div>
+      </div>
+    </a>
 
-      <p class="copyright">© <span class="year">2025</span>، <span class="brand">CALMORIS</span></p>
-    </footer>
+    <a href="/ar/product/ashwagandha" class="card-link">
+      <div class="card">
+        <img src="../assets/images/products/mockup_capsule_main__3__04.webp" alt="أشواغاندا 500 ملغ كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">أشواغاندا 500 ملغ</span>
+          </div>
+          <p class="card-description">حيوية ومضاد للإجهاد</p>
+          <div class="card-footer">
+            <span class="card-price">220 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
+        </div>
+      </div>
+    </a>
 
-    <button id="backToTop" title="إلى الأعلى">↑</button>
+    <a href="/ar/product/immunitaire" class="card-link">
+      <div class="card">
+        <img src="../assets/images/products/mockup_capsule_main__3__05.webp" alt="تقوية المناعة كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">تقوية المناعة</span>
+          </div>
+          <p class="card-description">حماية طبيعية للجسم</p>
+          <div class="card-footer">
+            <span class="card-price">222 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
+        </div>
+      </div>
+    </a>
 
-    <!-- Scripts -->
-    <script src="../assets/js/home.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <a href="/ar/product/magnesium-glycinate" class="card-link">
+      <div class="card">
+        <img src="../assets/images/products/mockup_capsule_main__3__07.webp" alt="غليسينات المغنيسيوم كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">غليسينات المغنيسيوم</span>
+          </div>
+          <p class="card-description">نوم واسترخاء</p>
+          <div class="card-footer">
+            <span class="card-price">217,99 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
+        </div>
+      </div>
+    </a>
 
-    <script>
-      const swiper = new Swiper('.mySwiper', {
-        loop: true,
-        pagination: { el: '.swiper-pagination', clickable: true }
-        // Swiper يلتقط RTL تلقائيًا عند وجود dir="rtl" على html
-      });
+    <a href="/ar/product/magnesium-b6" class="card-link">
+      <div class="card">
+        <img src="../assets/images/products/mockup_capsule_main__3__06.webp" alt="مغنيسيوم B6 كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">مغنيسيوم B6</span>
+          </div>
+          <p class="card-description">توازن عصبي</p>
+          <div class="card-footer">
+            <span class="card-price">219 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
+        </div>
+      </div>
+    </a>
 
-      var swiper2 = new Swiper('.calmoris-review-slider', {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        autoplay: { delay: 4000, disableOnInteraction: false },
-        loop: true,
-        breakpoints: {
-          0:   { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024:{ slidesPerView: 3 }
-        }
-      });
-    </script>
-  </body>
+    <a href="/ar/product/multivitamines" class="card-link">
+      <div class="card">
+        <img src="../assets/images/products/mockup_capsule_main__3__08.webp" alt="فيتامينات متعددة كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">فيتامينات متعددة</span>
+          </div>
+          <p class="card-description">حيوية يومية</p>
+          <div class="card-footer">
+            <span class="card-price">222 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="/ar/product/sommeil-naturel" class="card-link">
+      <div class="card">
+        <img src="https://www.calmoris.com/assets/images/products/mockup_capsule_main__3_09.webp" alt="نوم طبيعي كالموريس">
+        <div class="card-content">
+          <div>
+            <span class="card-title">نوم طبيعي</span>
+          </div>
+          <p class="card-description">ميلاتونين وناردين</p>
+          <div class="card-footer">
+            <span class="card-price">226 درهم</span>
+            <span class="buy-btn">اشتر</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+        <section id="why">
+         <div class="calmoris-header">
+            <h1>كالموريس - عضوي وطبيعي بالكامل</h1>
+            <p>🌿 دع الطبيعة تعتني بك مع منتجاتنا العضوية والطبيعية 100%</p>
+         </div>
+         <div class="calmoris-faq-container">
+            <h2>لماذا كالموريس؟</h2>
+            <div class="calmoris-faq-item">
+               <button class="calmoris-accordion">أفضل جودة <span class="arrow">↓</span></button>
+               <div class="calmoris-panel">
+                  <p>مع كالموريس، استمتع بأفضل جودة مع مكملاتنا الغذائية الطبيعية، المختارة بعناية لتوفير الفعالية والصحة اليومية.</p>
+               </div>
+            </div>
+            <div class="calmoris-faq-item">
+               <button class="calmoris-accordion">أفضل سعر <span class="arrow">↓</span></button>
+               <div class="calmoris-panel">
+                  <p>مع كالموريس، استفد من أفضل سعر دون المساس بالجودة! مكملاتنا الغذائية الطبيعية تجمع بين التميز والقدرة على تحمل التكاليف لصحتك.</p>
+               </div>
+            </div>
+            <div class="calmoris-faq-item">
+               <button class="calmoris-accordion">الدفع عند التسليم <span class="arrow">↓</span></button>
+               <div class="calmoris-panel">
+                  <p>مع كالموريس، ادفع بكل بساطة! استمتع بالدفع عند التسليم لشراء آمن وخالٍ من القلق.</p>
+               </div>
+            </div>
+            <div class="calmoris-faq-item">
+               <button class="calmoris-accordion">تواصل معنا 7 أيام/7 <span class="arrow">↓</span></button>
+               <div class="calmoris-panel">
+                  <p>مع كالموريس، نحن متاحون لك 7 أيام في الأسبوع لأي مساعدة. نضمن لك استجابة سريعة وفعالة.</p>
+               </div>
+            </div>
+         </div>
+       </section>
+
+   <div id="review" class="calmoris-review-container">
+  <h2>اكتشف عملاءنا الراضين</h2>
+  <div class="swiper swiper-container calmoris-review-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">ياسين</p>
+          <p>منتج ممتاز! لاحظت تحسنًا في طاقتي من الأسبوع الأول.</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">خديجة</p>
+          <p>هذه المكملات غيرت حقًا روتيني اليومي. أشعر بتحسن أكبر.</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">سكينة</p>
+          <p>جودة استثنائية وتسليم سريع. أنصح به بشدة!</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">رضا</p>
+          <p>راضٍ جدًا عن شرائي. النتائج مرئية بعد بضعة أسابيع.</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">سارة</p>
+          <p>أحب الطعم وسهولة الاستخدام. ضروري في روتين صحتي.</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">محمد</p>
+          <p>خدمة العملاء في القمة! أجابوا بسرعة على جميع أسئلتي.</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">أمين</p>
+          <p>أشعر بمزيد من التركيز وتعب أقل في العمل منذ أن أتناولها.</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">لينا</p>
+          <p>تجربة شراء رائعة، الموقع واضح والتسليم سريع جدًا.</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">هشام</p>
+          <p>بعد شهر، أرى فرقًا حقيقيًا في مستوى طاقتي. برافو!</p>
+        </div>
+      </div>
+      <div class="swiper-slide calmoris-review-item">
+        <div class="calmoris-review-content">
+          <div class="calmoris-stars">⭐⭐⭐⭐⭐</div>
+          <p class="calmoris-reviewer">إيمان</p>
+          <p>منتج طبيعي وفعال، بالضبط ما كنت أبحث عنه.</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div> 
+  </div>
+</div>
+      </main>
+ <footer class="site-footer" role="contentinfo">
+    <nav class="footer-links" aria-label="روابط التذييل">
+      <div class="contact-us" id="contact">
+         <span>تواصل معنا</span>
+         <a href="mailto:support@calmoris.com" title="البريد الإلكتروني">
+             <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Support@calmoris.com</span>
+         </a>
+         <a href="tel:+212776703475" title="الهاتف">
+             <i class="fa-solid fa-phone" aria-hidden="true"></i><span>212776703475+</span>
+         </a>
+      </div>
+    </nav>
+
+    <div class="social" aria-label="وسائل التواصل الاجتماعي">
+      <a href="https://www.facebook.com/calmoris.officielle" aria-label="فيسبوك" title="فيسبوك">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.instagram.com/calmoris_officielle" aria-label="إنستغرام" title="إنستغرام">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.tiktok.com/@calmoris" aria-label="تيك توك" title="تيك توك">
+        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <hr class="footer-divider" />
+    <p class="copyright">© <span class="year">2025</span>، <span class="brand">كالموريس</span></p>
+  </footer>
+      <button id="backToTop" title="العودة للأعلى">↑</button>
+      <script src="../assets/js/home.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+         const swiper = new Swiper('.mySwiper', {
+           loop: true,
+           pagination: {
+             el: '.swiper-pagination',
+             clickable: true,
+           }
+         });
+  
+         var swiper2 = new Swiper('.calmoris-review-slider', {
+           slidesPerView: 3,
+           spaceBetween: 20,
+           autoplay: {
+             delay: 4000,
+             disableOnInteraction: false,
+           },
+           loop: true,
+           breakpoints: {
+             0: { slidesPerView: 1 },
+             768: { slidesPerView: 2 },
+             1024: { slidesPerView: 3 },
+           }
+         });
+      </script>
+   </body>
 </html>

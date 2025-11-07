@@ -79,13 +79,26 @@ accordions.forEach(accordion => {
   });
 });
 
-const messages = [ 
+const messages_fr = [ 
    "Votre nuit parfaite commence ici.😴",
     "Livraison GRATUITE 🚚",
     "100% Naturel et Bio 🌿",
     "Support Client 24/7 📞",
      "Satisfaction Garantie ou Remboursé 💯"
   ];
+
+ 
+const messages_ar = [ 
+  "ليلتك المثالية تبدأ من هنا 😴",
+  "توصيل مجاني 🚚",
+  "طبيعي وعضوي 100٪ 🌿",
+  "دعم عملاء 24/7 📞",
+  "رضاك مضمون أو استرجاع المبلغ 💯"
+]; 
+if (window.location.pathname === '/ar' || window.location.pathname === '/ar/') {
+   messages= messages_ar;
+  }
+
 
   const msgContainer = document.querySelector(".announcement-message");
   const msgEl = document.querySelector(".announcement-message .text");

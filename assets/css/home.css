@@ -425,23 +425,24 @@ footer {
   0% { transform: translateX(0); }
   100% { transform: translateX(-40%); }
 }
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #00796b;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
+#whatssapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 31px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-align:center;
+    text-align: -webkit-center;
+    z-index: 1000;
+ 
 }
 
 #backToTop:hover {
@@ -967,8 +968,8 @@ a, button {
 
 
     .site-footer{
-      background: var(--footer-bg);
-      color: var(--footer-text);
+      background: black;
+      color:  white;
       text-align: center;
       padding: 40px 16px 28px;
       font-family: system-ui, -apple-system, "Inter", "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
@@ -979,17 +980,21 @@ a, button {
       display: inline-flex;
       gap: 28px;
       justify-content: center;
-     align-items: flex-start;
+      align-items: flex-start;
       flex-wrap: wrap;
       margin-bottom: 18px;
       font-size: 15px;
       line-height: 1;
     }
-    .footer-links a{
-      color: var(--footer-text);
+    .footer-links a,.footer-links a i { 
+      color:  white;
       text-decoration: none;
       font-weight: 500;
       letter-spacing: .2px;
+    }
+    .footer-links a i {
+      margin-right: 6px;
+      margin-left: 6px;
     }
     .footer-links a:hover{
       text-decoration: underline;

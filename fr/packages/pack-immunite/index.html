@@ -42,11 +42,178 @@
   <!-- Styles -->
   <link rel="stylesheet" href="https://www.calmoris.com/assets/css/product.css" /> 
   <link rel="stylesheet" href="https://www.calmoris.com/assets/css/slider.css" /> 
-  
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
-  
+  <style>
+     /* Coupon Styles */
+  .coupon-section {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .coupon-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: stretch;
+  }
+
+  .coupon-input {
+    flex: 1;
+    padding: 13px 3px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Funnel Sans', sans-serif;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    background: #fff;
+    color: #2c3e50;
+  }
+
+  .coupon-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+
+  .coupon-input:disabled {
+    background: #f8f9fa;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  .coupon-input::placeholder {
+    color: #95a5a6;
+    text-transform: none;
+  }
+
+  .btn-apply-coupon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0px 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: 'Funnel Sans', sans-serif;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+  }
+
+  .btn-apply-coupon:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  }
+
+  .btn-apply-coupon:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  .btn-apply-coupon:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .coupon-message {
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: none;
+    font-weight: 500;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .coupon-message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+    border-left: 4px solid #28a745;
+  }
+
+  .coupon-message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+    border-left: 4px solid #dc3545;
+  }
+
+  .coupon-message.info {
+    display: block;
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 2px solid #bee5eb;
+    border-left: 4px solid #17a2b8;
+  }
+
+  .discount-applied {
+    color: #27ae60;
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 8px 12px;
+    background: #d4edda;
+    border-radius: 6px;
+    border-left: 3px solid #27ae60;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .coupon-input-wrapper {
+      flex-direction: column;
+    }
+    
+    .btn-apply-coupon {
+      width: 100%;
+      padding: 14px;
+    }
+    
+    .coupon-input {
+      width: 100%;
+    }
+  }
+  </style>
+  <!-- Firebase --> 
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyB9bMwqm0X1KzXyk8U370Y8aWNZzUIMhQs",
+    authDomain: "calmoris-7f87f.firebaseapp.com",
+    projectId: "calmoris-7f87f",
+    storageBucket: "calmoris-7f87f.firebasestorage.app",
+    messagingSenderId: "179124967618",
+    appId: "1:179124967618:web:7ce3b24a76c3c1dc5e835b",
+    measurementId: "G-YX3DWNQZPM"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </head>
 <body class="product-page">
  <header>
@@ -508,5 +675,12 @@
       }
     });
   </script>
+      <!-- Firebase SDKs for Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Your Firebase files -->
+<script src="../../../firebase-functions.js"></script>
+
 </body>
 </html>

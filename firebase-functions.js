@@ -15,8 +15,9 @@ const db = firebase.firestore();
 
 // Global variables
 let appliedCoupon = null;
-const basePrice = 449;
-
+ 
+const basePrice =  parseInt(document.getElementById('unit-price').getAttribute('data-base-price'))  ;
+ 
 // Coupon validation function
 async function validateCoupon(code) {
   if (!code || code.trim() === '') {
@@ -109,7 +110,7 @@ function updateTotalPrice() {
 
 // Update WhatsApp link
 function updateWhatsAppLink(quantity, totalPrice, coupon) {
-  const productName = "Pack Immunité & Protection";
+  const productName = document.querySelector('[itemprop="name"]').textContent.trim() || 'Produit Calmoris';
   let message = `Bonjour Calmoris,\n\nJe souhaite commander :\n📦 ${productName}\n🔢 Quantité : ${quantity}\n💰 Total : ${totalPrice} DH`;
   
   if (coupon) {
@@ -143,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     applyBtn.disabled = false;
     applyBtn.textContent = 'Appliquer';
-
+        
     if (result.valid) {
       appliedCoupon = result.couponData;
       couponMessage.className = 'coupon-message success';
@@ -164,31 +165,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const incBtn = document.querySelector('.qty-btn.inc');
   const decBtn = document.querySelector('.qty-btn.dec');
   const qtyInput = document.getElementById('quantity');
-
-  if (incBtn) {
-    incBtn.addEventListener('click', function() {
-      qtyInput.value = parseInt(qtyInput.value) + 1;
-      updateTotalPrice();
-    });
-  }
-
-  if (decBtn) {
-    decBtn.addEventListener('click', function() {
-      if (parseInt(qtyInput.value) > 1) {
-        qtyInput.value = parseInt(qtyInput.value) - 1;
-        updateTotalPrice();
-      }
-    });
-  }
-
-  if (qtyInput) {
-    qtyInput.addEventListener('change', function() {
-      if (parseInt(this.value) < 1) {
-        this.value = 1;
-      }
-      updateTotalPrice();
-    });
-  }
+ 
+incBtn?.addEventListener('click', () => {
+    Clean();
+  });
+decBtn?.addEventListener('click', () => { 
+     Clean();
+  });
+ function Clean(params) {
+    const couponInput = document.getElementById('coupon-code');
+    const couponMessage = document.getElementById('coupon-message');
+    const discountdisplay = document.getElementById('discount-display');
+     couponMessage.style.display = discountdisplay.style.display= 'none';
+    const applyBtn = document.getElementById('apply-coupon-btn');;
+     couponInput.disabled = false;
+      applyBtn.textContent = 'Appliquer';
+      applyBtn.disabled = false;
+      applyBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+ }
 
   // Allow Enter key to apply coupon
   document.getElementById('coupon-code').addEventListener('keypress', function(e) {

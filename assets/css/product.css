@@ -146,7 +146,9 @@ body.product-page {
 /* Responsive */
 @media (max-width: 992px) {
   .product-page .product-wrap { grid-template-columns: 1fr; }
-  .product-page .buy-box { grid-template-columns: 1fr 1fr; }
+  .product-page .buy-box { 
+        flex-direction: column;
+    display: flex;}
   .product-page .btn-buy-now { grid-column: 1 / -1; justify-self: stretch; text-align: center; }
 }
 @media (max-width: 480px) {
@@ -1006,7 +1008,8 @@ footer {
     display: none;
   } 
 .product-page .buy-box {
-    grid-template-columns: 1fr auto;
+    flex-direction: column;
+    display: flex;
 }
   .quantity-control , .product-page .btn-buy-now.buy-btn{
    

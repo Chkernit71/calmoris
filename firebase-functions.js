@@ -111,13 +111,14 @@ function updateTotalPrice() {
 // Update WhatsApp link
 function updateWhatsAppLink(quantity, totalPrice, coupon) {
   const productName = document.querySelector('[itemprop="name"]').textContent.trim() || 'Produit Calmoris';
-  let message = `Bonjour Calmoris,\n\nJe souhaite commander :\n📦 ${productName}\n🔢 Quantité : ${quantity}\n💰 Total : ${totalPrice} DH`;
+    
+  let message = `Bonjour Calmoris,\n\nJe souhaite commander :\n\n👤 Nom :  \n👤 Prénom : \n📱 Téléphone : \n\n📦  \n🔢 Quantité : ${quantity}\n💰 Total : ${totalPrice} DH`;
   
   if (coupon) {
     const couponCode = document.getElementById('coupon-code').value.toUpperCase();
     message += `\n🎟️ Code promo : ${couponCode}`;
   }
-  message += `\n\nNom: \n Adresse: \nTéléphone: `;
+  
   const whatsappUrl = `https://wa.me/+212776703475?text=${encodeURIComponent(message)}`;
   document.getElementById('whatsapp-btn').href = whatsappUrl;
 }

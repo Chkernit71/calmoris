@@ -39,6 +39,7 @@ function updateTotalAndLink() {
   var  total = unitPrice * q;
   totalPriceEl.textContent = String(total);
   var  message = `Bonjour Calmoris, je souhaite commander ${q} ${q > 1 ? 'unités de' : 'un'} ${productName} (Total: ${total} DH).`;
+        message += `\n\nNom: \n Adresse: \nTéléphone: `;
   var  encoded = encodeURIComponent(message);
   whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encoded}`;
 }

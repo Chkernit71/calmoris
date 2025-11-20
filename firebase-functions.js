@@ -117,7 +117,7 @@ function updateWhatsAppLink(quantity, totalPrice, coupon) {
     const couponCode = document.getElementById('coupon-code').value.toUpperCase();
     message += `\n🎟️ Code promo : ${couponCode}`;
   }
-  
+  message += `\n\nNom: \n Adresse: \nTéléphone: `;
   const whatsappUrl = `https://wa.me/+212776703475?text=${encodeURIComponent(message)}`;
   document.getElementById('whatsapp-btn').href = whatsappUrl;
 }

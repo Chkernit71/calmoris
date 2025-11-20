@@ -38,7 +38,8 @@ function updateTotalAndLink() {
   var q = Math.max(1, parseInt(qtyInput.value || '1', 10));
   var total = unitPrice * q;
   totalPriceEl.textContent = String(total);
-    
+  
+  
   var message = `Bonjour Calmoris,\n\nJe souhaite commander :\n\n👤 Nom : \n👤 Prénom : \n📱 Téléphone : \n📍 Adresse : \n\n📦 ${productName}\n🔢 Quantité : ${q}\n💰 Total : ${total} DH`;
   
   var encoded = encodeURIComponent(message);

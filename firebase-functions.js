@@ -112,7 +112,7 @@ function updateTotalPrice() {
 function updateWhatsAppLink(quantity, totalPrice, coupon) {
   const productName = document.querySelector('[itemprop="name"]').textContent.trim() || 'Produit Calmoris';
     
-  let message = `Bonjour Calmoris,\n\nJe souhaite commander :\n\n👤 Nom :  \n👤 Prénom : \n📱 Téléphone : \n\📦 Nom de produit: ${productName} \n🔢 Quantité : ${quantity}\n💰 Total : ${totalPrice} DH`;
+  let message = `Bonjour Calmoris,\nJe souhaite commander :\n👤 Nom :  \n👤 Prénom : \n📱 Téléphone : \n\📦 Nom de produit: ${productName} \n🔢 Quantité : ${quantity}\n💰 Total : ${totalPrice} DH`;
   
   if (coupon) {
     const couponCode = document.getElementById('coupon-code').value.toUpperCase();

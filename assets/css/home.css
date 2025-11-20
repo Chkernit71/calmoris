@@ -55,6 +55,7 @@ body {
 ============================== */
 .lang-switch {
   position: relative;
+  display: none;
 }
 .lang-switch img {
   width: 29px;
@@ -1331,3 +1332,4 @@ a, button {
           height: 430px;
       }
   }
+  

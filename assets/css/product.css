@@ -5,7 +5,9 @@ body.product-page {
   background-color: #fff;
   color: #222;
 }
-
+.lang-switch {
+  display: none;
+}
 /* Breadcrumbs */
 .product-page .breadcrumbs {
   font-size: .95rem; color: #6b7280; margin: 12px 0 18px;

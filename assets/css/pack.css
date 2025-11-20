@@ -134,15 +134,20 @@
     .coupon-input-wrapper {
       flex-direction: column;
     }
-    
+    .product-page .product-title{
+     text-align: center;
+    }
+  .product-page .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+  }
     .btn-apply-coupon {
       width: 100%;
       padding: 14px;
     }
     
-    .coupon-input {
-      width: 100%;
-    }
   } 
     .package-badge-inline {
       margin: 15px 0;
@@ -159,7 +164,7 @@
     .old-price {
       text-decoration: line-through;
       color: #95a5a6;
-      font-size: 1.5rem;
+      font-size: 1rem;
       margin-right: 10px;
     }
     .badge.save {

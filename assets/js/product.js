@@ -11,33 +11,41 @@ document.querySelectorAll('.product-thumbs .thumb').forEach(btn => {
 });
 
 // ===== Tabs (ARIA-friendly) =====
-var  tabBtns = document.querySelectorAll('.tabs-nav [role="tab"]');
-var  tabPanels = document.querySelectorAll('[role="tabpanel"]');
+var tabBtns = document.querySelectorAll('.tabs-nav [role="tab"]');
+var tabPanels = document.querySelectorAll('[role="tabpanel"]');
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     tabBtns.forEach(b => b.setAttribute('aria-selected', 'false'));
     tabPanels.forEach(p => p.hidden = true);
     btn.setAttribute('aria-selected', 'true');
-    var  target = document.getElementById(btn.getAttribute('aria-controls'));
+    var target = document.getElementById(btn.getAttribute('aria-controls'));
     if (target) target.hidden = false;
   });
 });
 
 // ===== WhatsApp buy flow (merged & fixed) =====
-var  productName = document.querySelector('[itemprop="name"]')?.textContent.trim() || 'Produit Calmoris';
-var  qtyInput = document.getElementById('quantity');
-var  incBtn = document.querySelector('.qty .inc');
-var  decBtn = document.querySelector('.qty .dec');
-var  whatsappBtn = document.getElementById('whatsapp-btn');
-var  totalPriceEl = document.getElementById('total-price');
-var  unitPrice = parseInt(document.querySelector('[itemprop="price"]')?.getAttribute('content') || '220', 10);
+var productName = document.querySelector('[itemprop="name"]')?.textContent.trim() || 'Produit Calmoris';
+var qtyInput = document.getElementById('quantity');
+var incBtn = document.querySelector('.qty .inc');
+var decBtn = document.querySelector('.qty .dec');
+var whatsappBtn = document.getElementById('whatsapp-btn');
+var totalPriceEl = document.getElementById('total-price');
+var priceElement = document.querySelector('[itemprop="price"]');
+var unitPrice = parseInt(priceElement?.getAttribute('content') || '220', 10);
+
+// Add data-base-price attribute if not exists (for coupon functionality)
+if (priceElement && !priceElement.hasAttribute('data-base-price')) {
+  priceElement.setAttribute('data-base-price', unitPrice);
+  priceElement.setAttribute('id', 'unit-price');
+}
+
 // ⚠️ Replace with your actual WhatsApp number, digits only:
-var  phoneNumber = '212776703475';
+var phoneNumber = '212776703475';
 
 function updateTotalAndLink() {
   var q = Math.max(1, parseInt(qtyInput.value || '1', 10));
   var total = unitPrice * q;
-  totalPriceEl.textContent = String(total); 
+  totalPriceEl.textContent = String(total);
   var message = `Bonjour Calmoris,\nJe souhaite commander :\n👤 Nom : \n👤 Prénom : \n📱 Téléphone : \n📍 Adresse : \n📦 ${productName}\n🔢 Quantité : ${q}\n💰 Total : ${total} DH`;
   var encoded = encodeURIComponent(message);
   whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encoded}`;
@@ -49,8 +57,8 @@ qtyInput?.addEventListener('input', updateTotalAndLink);
 updateTotalAndLink();
 
 // Language switcher
-var  currentLangBtn = document.getElementById('current-lang');
-var  langOptions = document.getElementById('lang-options');
+var currentLangBtn = document.getElementById('current-lang');
+var langOptions = document.getElementById('lang-options');
 
 // Toggle dropdown
 currentLangBtn.addEventListener('click', () => {
@@ -60,7 +68,7 @@ currentLangBtn.addEventListener('click', () => {
 // Handle language selection
 langOptions.querySelectorAll('div').forEach(option => {
   option.addEventListener('click', () => {
-    var  lang = option.getAttribute('data-lang');
+    var lang = option.getAttribute('data-lang');
 
     // Redirect to correct version
     if (lang === 'fr') {
@@ -71,17 +79,17 @@ langOptions.querySelectorAll('div').forEach(option => {
   });
 });
 
-  // Mobile menu toggle
-  var  menuToggle = document.querySelector('.menu-toggle');
-  var  mainMenu = document.querySelector('.main-nav ul');
+// Mobile menu toggle
+var menuToggle = document.querySelector('.menu-toggle');
+var mainMenu = document.querySelector('.main-nav ul');
 
-  menuToggle.addEventListener('click', () => {
-    mainMenu.classList.toggle('show');
+menuToggle.addEventListener('click', () => {
+  mainMenu.classList.toggle('show');
 
-    // toggle icon ☰ <-> ✖
-    if (mainMenu.classList.contains('show')) {
-      menuToggle.textContent = '✖';
-    } else {
-      menuToggle.textContent = '☰';
-    }
-  });
+  // toggle icon ☰ <-> ✖
+  if (mainMenu.classList.contains('show')) {
+    menuToggle.textContent = '✖';
+  } else {
+    menuToggle.textContent = '☰';
+  }
+});
